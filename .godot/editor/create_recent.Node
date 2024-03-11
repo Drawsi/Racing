@@ -1,0 +1,15 @@
+CollisionShape2D
+StaticBody2D
+GPUParticles2D
+PanelContainer
+Label
+CanvasLayer
+VBoxContainer
+HBoxContainer
+MarginContainer
+Panel
+HSlider
+VSlider
+SpinBox
+Control
+Camera2D

@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2orfd7syn6st"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_xd87t"]
+[ext_resource type="Texture2D" uid="uid://c2egs1tnh6do4" path="res://icon.svg" id="2_txj3p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_joo63"]
+radius = 40.0
+height = 128.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(328, 240)
+script = ExtResource("1_xd87t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.6875, 1)
+texture = ExtResource("2_txj3p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-48, -48)
+rotation = 1.5708
+scale = Vector2(0.15625, 0.25)
+texture = ExtResource("2_txj3p")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-48, 40)
+rotation = 1.5708
+scale = Vector2(0.15625, 0.25)
+texture = ExtResource("2_txj3p")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(48, -48)
+rotation = 1.5708
+scale = Vector2(0.15625, 0.25)
+texture = ExtResource("2_txj3p")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(48, 40)
+rotation = 1.5708
+scale = Vector2(0.15625, 0.25)
+texture = ExtResource("2_txj3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_joo63")

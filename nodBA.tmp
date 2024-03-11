@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0hqkjjwsmu"]
+
+[ext_resource type="Texture2D" uid="uid://c2egs1tnh6do4" path="res://icon.svg" id="1_40lhd"]
+[ext_resource type="PackedScene" uid="uid://c2orfd7syn6st" path="res://character_body_2d.tscn" id="1_f2fp3"]
+[ext_resource type="PackedScene" uid="uid://b8so74nq27r3" path="res://control.tscn" id="3_wlvsd"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_f2fp3")]
+position = Vector2(488, 352)
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(216, 336)
+texture = ExtResource("1_40lhd")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(936, 336)
+texture = ExtResource("1_40lhd")
+
+[node name="Control" parent="." instance=ExtResource("3_wlvsd")]
+offset_right = 1920.0
+offset_bottom = 1080.0

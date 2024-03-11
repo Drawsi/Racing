@@ -1,0 +1,5 @@
+res://node_2d.tscn
+res://setting_slider.tscn
+res://control.tscn
+res://character_body_2d.tscn
+res://CharacterBody2D.gd
