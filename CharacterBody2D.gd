@@ -3,7 +3,7 @@ extends CharacterBody2D
 var wheel_base = 70
 var steering_angle = 15
 var engine_power = 1200
-var friction = -50
+var friction = -30
 var drag = -0.06
 var braking = -450
 var max_speed_reverse = 250
@@ -19,6 +19,7 @@ func _physics_process(delta):
 	get_input()
 	apply_friction(delta)
 	calculate_steering(delta)
+	particles()
 	velocity += acceleration * delta
 	move_and_slide()
 	
@@ -44,8 +45,10 @@ func calculate_steering(delta):
 	front_wheel += velocity.rotated(steer_direction) * delta
 	var new_heading = rear_wheel.direction_to(front_wheel)
 	var traction = traction_slow
+	
 	if velocity.length() > slip_speed:
 		traction = traction_fast
+	
 	var d = new_heading.dot(velocity.normalized())
 	if d > 0:
 		velocity = lerp(velocity, new_heading * velocity.length(), traction * delta)
@@ -53,3 +56,15 @@ func calculate_steering(delta):
 		velocity = -new_heading * min(velocity.length(), max_speed_reverse)
 #	velocity = new_heading * velocity.length()
 	rotation = new_heading.angle()
+
+func particles():
+	var l = preload("res://drift_line.tscn").instantiate()
+	#var r = preload("res://drag_line.tscn").instantiate()
+	if velocity.length() > slip_speed and rotation:
+		l.position = $Rear_Left_Wheel.global_position
+		l.rotation = rotation
+		$Rear_Left_Wheel.add_child(l)
+		#l.add_point($Rear_Left_Wheel.global_position)
+		#$Rear_Right_Wheel.add_child(r)
+	else:
+		pass

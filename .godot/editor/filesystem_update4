@@ -1,5 +1,8 @@
-res://node_2d.tscn
-res://setting_slider.tscn
-res://control.tscn
 res://character_body_2d.tscn
+res://node_2d.tscn
+res://Line2D.gd
 res://CharacterBody2D.gd
+res://drag_line.tscn
+res://control.tscn
+res://Drift_Line.gd
+res://drift_line.tscn

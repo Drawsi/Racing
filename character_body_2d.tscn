@@ -1,73 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2orfd7syn6st"]
+[gd_scene load_steps=4 format=3 uid="uid://c2orfd7syn6st"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_xd87t"]
-[ext_resource type="Texture2D" uid="uid://c2egs1tnh6do4" path="res://icon.svg" id="2_txj3p"]
-
-[sub_resource type="Gradient" id="Gradient_uosty"]
-offsets = PackedFloat32Array(0.622951, 1)
-colors = PackedColorArray(0.156863, 0.0313726, 0, 1, 0.156863, 0.0313726, 0, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_w2jx0"]
-gradient = SubResource("Gradient_uosty")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qaprw"]
-lifetime_randomness = 0.55
-particle_flag_disable_z = true
-gravity = Vector3(-100, 0, 0)
-scale_max = 20.0
-color_ramp = SubResource("GradientTexture1D_w2jx0")
-turbulence_enabled = true
+[ext_resource type="Texture2D" uid="uid://dkngb7v0n521u" path="res://bk_cars1.a.png" id="3_ur2rs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_joo63"]
-radius = 40.0
+radius = 32.0
 height = 128.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xd87t")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(-48, -48)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_qaprw")
+[node name="Rear_Left_Wheel" type="Marker2D" parent="."]
+position = Vector2(-40, -24)
+metadata/_edit_group_ = true
 
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
-position = Vector2(-48, 40)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_qaprw")
+[node name="Rear_Right_Wheel" type="Marker2D" parent="."]
+position = Vector2(-40, 24)
+metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
-scale = Vector2(0.6875, 1)
-texture = ExtResource("2_txj3p")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(-48, -48)
-rotation = 1.5708
-scale = Vector2(0.15625, 0.25)
-texture = ExtResource("2_txj3p")
-
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(-48, 40)
-rotation = 1.5708
-scale = Vector2(0.15625, 0.25)
-texture = ExtResource("2_txj3p")
-
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(48, -48)
-rotation = 1.5708
-scale = Vector2(0.15625, 0.25)
-texture = ExtResource("2_txj3p")
-
-[node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(48, 40)
-rotation = 1.5708
-scale = Vector2(0.15625, 0.25)
-texture = ExtResource("2_txj3p")
+[node name="BkCars1_a" type="Sprite2D" parent="."]
+z_index = 1
+rotation = 1.57079
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_ur2rs")
+region_enabled = true
+region_rect = Rect2(121, 345, 47, 88)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_joo63")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
 limit_smoothed = true
+position_smoothing_speed = 1.0

@@ -6,8 +6,17 @@
 
 [node name="Node2D" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -6248.0
+offset_top = -3336.0
+offset_right = 7112.0
+offset_bottom = 4688.0
+color = Color(0.305882, 0.207843, 0.117647, 1)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_f2fp3")]
 position = Vector2(488, 352)
+slide_on_ceiling = false
+floor_stop_on_slope = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(216, 336)
