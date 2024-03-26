@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://2bqidujqq8gh"]
+
+[ext_resource type="Script" path="res://Scripts/Line2D.gd" id="1_1bmya"]
+[ext_resource type="Texture2D" uid="uid://j5aur5u485rh" path="res://Images/Miscellaneous/line2.png" id="1_sc1rn"]
+
+[sub_resource type="Gradient" id="Gradient_ver7m"]
+offsets = PackedFloat32Array(0.0439025, 0.390244)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
+
+[node name="Drag_Line" type="Line2D"]
+show_behind_parent = true
+top_level = true
+gradient = SubResource("Gradient_ver7m")
+texture = ExtResource("1_sc1rn")
+texture_mode = 2
+joint_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("1_1bmya")
+MAX_LENGTH = 800
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,138 @@
+[gd_scene load_steps=19 format=3 uid="uid://b0hqkjjwsmu"]
+
+[ext_resource type="PackedScene" uid="uid://c2orfd7syn6st" path="res://Scenes/Driver.tscn" id="1_it855"]
+[ext_resource type="Texture2D" uid="uid://c2egs1tnh6do4" path="res://icon.svg" id="2_r5mp8"]
+[ext_resource type="PackedScene" uid="uid://b8so74nq27r3" path="res://Scenes/control.tscn" id="3_5nur2"]
+[ext_resource type="Texture2D" uid="uid://bd2b8c7axdman" path="res://Images/Smoke/0.png" id="4_gyjwx"]
+[ext_resource type="PackedScene" uid="uid://bjhjdwdrp2b5k" path="res://Scenes/lamp_post.tscn" id="5_6v6so"]
+
+[sub_resource type="Gradient" id="Gradient_c2mjq"]
+offsets = PackedFloat32Array(0.136508, 0.473016, 0.95873)
+colors = PackedColorArray(0.356863, 0.423529, 0.364706, 1, 0.231373, 0.172549, 0.207843, 1, 0.164706, 0.121569, 0.176471, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_s00yy"]
+noise_type = 0
+frequency = 0.0269
+fractal_type = 0
+domain_warp_enabled = true
+domain_warp_amplitude = 12.0
+domain_warp_fractal_gain = 1.325
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7x8no"]
+generate_mipmaps = false
+seamless = true
+color_ramp = SubResource("Gradient_c2mjq")
+noise = SubResource("FastNoiseLite_s00yy")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yoyxn"]
+polygon = PackedVector2Array(58, -62.8, 58, -61.5, 63, -57.5, 63, -55.4, 64, -54.4, 64, 54, 62.8, 58, 61.5, 58, 57.5, 63, 55.4, 63, 54.4, 64, -54.6, 64, -63, 57.5, -63, 55.4, -64, 54.4, -64, -54, -62.8, -58, -61.5, -58, -57.5, -63, -55.2, -63, -54, -63.6, 54, -64)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6x18h"]
+polygon = PackedVector2Array(58, -62.8, 58, -61.5, 63, -57.5, 63, -55.4, 64, -54.4, 64, 54, 62.8, 58, 61.5, 58, 57.5, 63, 55.4, 63, 54.4, 64, -54.6, 64, -63, 57.5, -63, 55.4, -64, 54.4, -64, -54, -62.8, -58, -61.5, -58, -57.5, -63, -55.2, -63, -54, -63.6, 54, -64)
+
+[sub_resource type="Curve" id="Curve_7ykvu"]
+_data = [Vector2(0.758842, 0.974968), 0.0, -2.59499, 0, 0, Vector2(0.971061, 0), -2.82455, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8etpi"]
+width = 128
+curve = SubResource("Curve_7ykvu")
+
+[sub_resource type="Curve" id="Curve_05fkk"]
+_data = [Vector2(0, 0.21978), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_tkd2s"]
+curve = SubResource("Curve_05fkk")
+
+[sub_resource type="Curve" id="Curve_643r6"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_h2ugx"]
+curve = SubResource("Curve_643r6")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rkga0"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 0.4
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_tkd2s")
+alpha_curve = SubResource("CurveTexture_8etpi")
+hue_variation_max = 0.02
+turbulence_enabled = true
+turbulence_noise_strength = 4.77
+turbulence_noise_speed_random = 0.76
+turbulence_influence_max = 0.239
+turbulence_influence_over_life = SubResource("CurveTexture_h2ugx")
+
+[sub_resource type="Environment" id="Environment_xgdt3"]
+background_mode = 1
+background_color = Color(0.14902, 0.105882, 0.0431373, 1)
+ssr_enabled = true
+glow_enabled = true
+glow_normalized = true
+fog_enabled = true
+volumetric_fog_enabled = true
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 2
+offset_left = -4384.0
+offset_top = -3488.0
+offset_right = 7456.0
+offset_bottom = 4208.0
+texture = SubResource("NoiseTexture2D_7x8no")
+
+[node name="Driver" parent="." instance=ExtResource("1_it855")]
+position = Vector2(536, 280)
+slide_on_ceiling = false
+floor_stop_on_slope = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(216, 336)
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2_r5mp8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(64, -58.1, 64, 55, 55.7, 64, -56.3, 64, -64, 58, -64, 55, -64, -55.1, -58.1, -64, -55.5, -64, 55.1, -64)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D"]
+occluder = SubResource("OccluderPolygon2D_yoyxn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(896, 336)
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D2"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2_r5mp8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(64, -58.1, 64, 55, 55.7, 64, -56.3, 64, -64, 58, -64, 55, -64, -55.1, -58.1, -64, -55.5, -64, 55.1, -64)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D2"]
+occluder = SubResource("OccluderPolygon2D_6x18h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("3_5nur2")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+player_path = NodePath("../../Driver")
+metadata/_edit_lock_ = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(704, 144)
+process_material = SubResource("ParticleProcessMaterial_rkga0")
+texture = ExtResource("4_gyjwx")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xgdt3")
+
+[node name="Lamp_Post" parent="." instance=ExtResource("5_6v6so")]
