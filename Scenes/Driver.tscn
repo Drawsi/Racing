@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_xd87t"]
 [ext_resource type="Texture2D" uid="uid://bd2b8c7axdman" path="res://Images/Smoke/0.png" id="3_q0gkq"]
 [ext_resource type="Texture2D" uid="uid://dkngb7v0n521u" path="res://Images/Miscellaneous/bk_cars1.a.png" id="3_ur2rs"]
-[ext_resource type="Texture2D" uid="uid://cq3kk07lqxbvh" path="res://Images/Lights/3.png" id="4_qdfy5"]
+[ext_resource type="Texture2D" uid="uid://w1frs388y2pa" path="res://Images/Lights/long_beam.png" id="4_no1bv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_joo63"]
 radius = 32.0
@@ -92,19 +92,17 @@ randomness = 0.28
 occluder = SubResource("OccluderPolygon2D_7yt31")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-texture_filter = 1
 position = Vector2(64, 32)
 rotation = 1.57079
 color = Color(0.862745, 1, 1, 1)
 shadow_enabled = true
-texture = ExtResource("4_qdfy5")
-texture_scale = 15.0
+texture = ExtResource("4_no1bv")
+texture_scale = 10.0
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-texture_repeat = 1
 position = Vector2(64, -32)
 rotation = 1.57079
 color = Color(0.862745, 1, 1, 1)
 shadow_enabled = true
-texture = ExtResource("4_qdfy5")
-texture_scale = 15.0
+texture = ExtResource("4_no1bv")
+texture_scale = 10.0

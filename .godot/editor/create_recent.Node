@@ -1,9 +1,10 @@
+LightOccluder2D
+CanvasModulate
 StaticBody2D
 PointLight2D
 DirectionalLight2D
 WorldEnvironment
 TextureRect
-LightOccluder2D
 GPUParticles2D
 Timer
 CanvasLayer
@@ -11,4 +12,3 @@ ColorRect
 Line2D
 Marker2D
 CollisionShape2D
-PanelContainer

@@ -135,4 +135,8 @@ texture = ExtResource("4_gyjwx")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xgdt3")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(-188, 64)
+color = Color(0.294118, 0.294118, 0.294118, 1)
+
 [node name="Lamp_Post" parent="." instance=ExtResource("5_6v6so")]
