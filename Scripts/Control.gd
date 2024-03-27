@@ -47,3 +47,4 @@ func _input(event):
 
 func _process(_delta):
 	container.get_node("Speedometer/Speed").text = "%4.1f" % player.velocity.length()
+	$"../TextureProgressBar".value = get_parent().get_parent().get_node("Driver").velocity.length()

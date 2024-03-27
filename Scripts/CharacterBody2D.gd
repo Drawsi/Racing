@@ -3,7 +3,7 @@ extends CharacterBody2D
 var wheel_base = 70
 var steering_angle = 15
 var engine_power = 1200
-var friction = -30
+var friction = -20
 var drag = -0.06
 var braking = -450
 var max_speed_reverse = 250

@@ -1,6 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://b0hqkjjwsmu"]
 
 [ext_resource type="PackedScene" uid="uid://c2orfd7syn6st" path="res://Scenes/Driver.tscn" id="1_it855"]
+[ext_resource type="Texture2D" uid="uid://dm1opspj0rbvp" path="res://Images/Miscellaneous/9ckrbkqf.bmp" id="1_r7wp6"]
 [ext_resource type="Texture2D" uid="uid://c2egs1tnh6do4" path="res://icon.svg" id="2_r5mp8"]
 [ext_resource type="PackedScene" uid="uid://b8so74nq27r3" path="res://Scenes/control.tscn" id="3_5nur2"]
 [ext_resource type="Texture2D" uid="uid://bd2b8c7axdman" path="res://Images/Smoke/0.png" id="4_gyjwx"]
@@ -65,15 +66,9 @@ turbulence_noise_strength = 4.77
 turbulence_noise_speed_random = 0.76
 turbulence_influence_max = 0.239
 turbulence_influence_over_life = SubResource("CurveTexture_h2ugx")
-
-[sub_resource type="Environment" id="Environment_xgdt3"]
-background_mode = 1
-background_color = Color(0.14902, 0.105882, 0.0431373, 1)
-ssr_enabled = true
-glow_enabled = true
-glow_normalized = true
-fog_enabled = true
-volumetric_fog_enabled = true
+sub_emitter_mode = 1
+sub_emitter_frequency = 4.0
+sub_emitter_keep_velocity = true
 
 [node name="Node2D" type="Node2D"]
 
@@ -85,6 +80,18 @@ offset_top = -3488.0
 offset_right = 7456.0
 offset_bottom = 4208.0
 texture = SubResource("NoiseTexture2D_7x8no")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(-188, 64)
+
+[node name="track" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("1_r7wp6")
+
+[node name="Line2D3" type="Line2D" parent="."]
+points = PackedVector2Array(-1920, 2576, -3744, 2672, -4192, 2888, -4216, 2944, -4176, 3008, 3680, 3000, 3896, 2936, 4056, 2840, 4176, 2728, 4264, 2600, 4320, 2480, 4352, 2360, 4352, 2248, 4336, 2144, 4296, 2048, 4208, 1936, 4120, 1872, 4016, 1808, 3912, 1776, 3808, 1768, 3704, 1768, 3544, 1824, 3512, 1888, 3480, 1960, 3496, 2064, 3528, 2144, 3552, 2232, 3544, 2320, 3512, 2384, 3440, 2400, 592, 2304, 528, 2304, 440, 2224, 264, 1760, 272, 1704, 288, 1648, 328, 1592, 368, 1560, 424, 1536, 480, 1536, 896, 1584, 992, 1592, 1096, 1592, 1192, 1560, 1288, 1520, 1376, 1448, 1448, 1360, 1512, 1240, 1544, 1144, 1544, 1048, 1536, 976, 1512, 888, 1456, 776, 1408, 696, 1328, 568, 1248, 448, 1176, 336, 1128, 224, 1096, 120, 1080, 24, 1080, -80, 1080, -168, 1096, -264, 1144, -384, 1200, -496, 1280, -600, 1376, -688, 1480, -760, 1608, -824, 1744, -864, 1912, -880, 3008, -808, 3256, -808, 3448, -840, 3568, -864, 3688, -904, 3776, -944, 3848, -1000, 3880, -1056, 3880, -1104, 3872, -1144, 3824, -1184, 3752, -1216, 2424, -1560, 520, -1304, 416, -1312, 352, -1336, 288, -1376, 208, -1448, 128, -1528, 64, -1624, 24, -1712, 8, -1776, 24, -1856, 72, -1920, 136, -1968, 200, -1984, 288, -1968, 368, -1920, 400, -1880, 456, -1800, 536, -1736, 616, -1712, 712, -1728, 776, -1776, 832, -1848, 872, -1928, 896, -2008, 880, -2136, 840, -2216, 792, -2288, 728, -2352, 632, -2416, 488, -2464, 320, -2480, 152, -2440, 48, -2392, -64, -2304, -120, -2240, -168, -2176)
+closed = true
+width = 300.0
 
 [node name="Driver" parent="." instance=ExtResource("1_it855")]
 position = Vector2(536, 280)
@@ -127,16 +134,97 @@ offset_bottom = 1080.0
 player_path = NodePath("../../Driver")
 metadata/_edit_lock_ = true
 
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 1408.0
+offset_top = 640.0
+offset_right = 1856.0
+offset_bottom = 1080.0
+max_value = 1000.0
+value = 321.0
+rounded = true
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = ExtResource("4_gyjwx")
+texture_progress = ExtResource("4_gyjwx")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(1, 0, 0, 1)
+radial_initial_angle = 190.0
+
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(704, 144)
 process_material = SubResource("ParticleProcessMaterial_rkga0")
 texture = ExtResource("4_gyjwx")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_xgdt3")
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-776, 80)
+points = PackedVector2Array(776, -1160, 2696, -1160, 2264, -2064, 2696, -2928, 776, -2928, 760, -2320, 1256, -2280, 1368, -2080, 1280, -1840, 776, -1760)
+closed = true
+width = 550.0
+default_color = Color(0.94902, 0.811765, 0.941176, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-position = Vector2(-188, 64)
-color = Color(0.294118, 0.294118, 0.294118, 1)
+[node name="Line2D2" type="Line2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-776, 80)
+points = PackedVector2Array(3224, -736, 3176, -1056, 5840, -1016)
+closed = true
+width = 550.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
 
 [node name="Lamp_Post" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(312, -1408)
+
+[node name="Lamp_Post2" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(336, -2544)
+
+[node name="Lamp_Post3" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(1320, -2504)
+
+[node name="Lamp_Post4" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(1352, -1432)
+
+[node name="Lamp_Post5" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(888, -672)
+
+[node name="Lamp_Post6" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(2048, -1992)
+
+[node name="Lamp_Post7" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(872, -3240)
+
+[node name="Lamp_Post8" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(-360, -1976)
+
+[node name="Lamp_Post9" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(2944, -1152)
+
+[node name="Lamp_Post10" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(3656, -592)
+
+[node name="Lamp_Post11" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(4360, -1152)
+
+[node name="Lamp_Post12" parent="." instance=ExtResource("5_6v6so")]
+visible = false
+position = Vector2(5072, -592)

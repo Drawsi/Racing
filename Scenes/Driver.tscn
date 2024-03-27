@@ -1,9 +1,22 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2orfd7syn6st"]
+[gd_scene load_steps=20 format=3 uid="uid://c2orfd7syn6st"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_xd87t"]
+[ext_resource type="Texture2D" uid="uid://0lralrsy83fu" path="res://Images/Miscellaneous/cars_normal.png" id="3_75cp6"]
+[ext_resource type="Texture2D" uid="uid://b06vyw74icr7j" path="res://Images/Smoke/1.png" id="3_lcp1w"]
 [ext_resource type="Texture2D" uid="uid://bd2b8c7axdman" path="res://Images/Smoke/0.png" id="3_q0gkq"]
 [ext_resource type="Texture2D" uid="uid://dkngb7v0n521u" path="res://Images/Miscellaneous/bk_cars1.a.png" id="3_ur2rs"]
 [ext_resource type="Texture2D" uid="uid://w1frs388y2pa" path="res://Images/Lights/long_beam.png" id="4_no1bv"]
+[ext_resource type="Texture2D" uid="uid://bmhrempptumcc" path="res://Images/Miscellaneous/cars.png" id="4_oi5r8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1vk4j"]
+diffuse_texture = ExtResource("3_ur2rs")
+normal_texture = ExtResource("3_75cp6")
+specular_texture = ExtResource("4_oi5r8")
+texture_filter = 1
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7yt31"]
+cull_mode = 2
+polygon = PackedVector2Array(-58, -30, 56, -30, 64, -20, 64, 20, 56, 30, -58, 30, -64, 22, -64, -22)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_joo63"]
 radius = 32.0
@@ -16,6 +29,13 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_8etpi"]
 width = 128
 curve = SubResource("Curve_7ykvu")
+
+[sub_resource type="Gradient" id="Gradient_14sle"]
+offsets = PackedFloat32Array(0.229682, 0.660777, 1)
+colors = PackedColorArray(0.103744, 0.103744, 0.103744, 1, 0.377919, 0.377919, 0.377919, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_76wsu"]
+gradient = SubResource("Gradient_14sle")
 
 [sub_resource type="Curve" id="Curve_05fkk"]
 _data = [Vector2(0, 0.21978), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -33,22 +53,22 @@ curve = SubResource("Curve_643r6")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d2wnv"]
 particle_flag_disable_z = true
-gravity = Vector3(0, 0, 0)
+angle_max = 720.0
+gravity = Vector3(0, 30, 0)
+tangential_accel_max = 20.0
 scale_min = 0.4
 scale_max = 0.6
 scale_curve = SubResource("CurveTexture_tkd2s")
+color_ramp = SubResource("GradientTexture1D_76wsu")
 alpha_curve = SubResource("CurveTexture_8etpi")
-hue_variation_max = 0.02
-turbulence_enabled = true
 turbulence_noise_strength = 20.0
 turbulence_noise_scale = 10.0
 turbulence_noise_speed_random = 0.76
 turbulence_influence_max = 0.239
 turbulence_influence_over_life = SubResource("CurveTexture_h2ugx")
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7yt31"]
-cull_mode = 1
-polygon = PackedVector2Array(-56, -32, 56, -32, 64, -24, 64, 24, 56, 32, -56, 32, -64, 24, -64, -24)
+sub_emitter_mode = 1
+sub_emitter_frequency = 4.0
+sub_emitter_keep_velocity = true
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xd87t")
@@ -64,34 +84,43 @@ metadata/_edit_group_ = true
 [node name="BkCars1_a" type="Sprite2D" parent="."]
 z_index = 1
 texture_filter = 1
-texture_repeat = 1
+texture_repeat = 2
 rotation = 1.57079
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("3_ur2rs")
+texture = SubResource("CanvasTexture_1vk4j")
 region_enabled = true
-region_rect = Rect2(121, 345, 47, 88)
+region_rect = Rect2(122, 346, 45, 86)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_7yt31")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_joo63")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+process_callback = 0
 limit_smoothed = true
-position_smoothing_speed = 1.0
+position_smoothing_speed = 50.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-visible = false
 texture_filter = 1
 position = Vector2(-64, -24)
-amount = 2000
+sub_emitter = NodePath("../GPUParticles2D2")
+process_material = SubResource("ParticleProcessMaterial_d2wnv")
+texture = ExtResource("3_lcp1w")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(16, -64)
 process_material = SubResource("ParticleProcessMaterial_d2wnv")
 texture = ExtResource("3_q0gkq")
-randomness = 0.28
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_7yt31")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(64, 32)
 rotation = 1.57079
 color = Color(0.862745, 1, 1, 1)
@@ -100,6 +129,7 @@ texture = ExtResource("4_no1bv")
 texture_scale = 10.0
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(64, -32)
 rotation = 1.57079
 color = Color(0.862745, 1, 1, 1)

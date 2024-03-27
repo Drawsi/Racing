@@ -23,7 +23,6 @@ texture_scale = 4.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 top_level = true
-scale = Vector2(1, 1)
 occluder = SubResource("OccluderPolygon2D_smosa")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
