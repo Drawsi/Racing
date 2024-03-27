@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://b0hqkjjwsmu"]
+[gd_scene load_steps=20 format=3 uid="uid://b0hqkjjwsmu"]
 
+[ext_resource type="Script" path="res://Scenes/testing_grounds.gd" id="1_gvnak"]
 [ext_resource type="PackedScene" uid="uid://c2orfd7syn6st" path="res://Scenes/Driver.tscn" id="1_it855"]
 [ext_resource type="Texture2D" uid="uid://dm1opspj0rbvp" path="res://Images/Miscellaneous/9ckrbkqf.bmp" id="1_r7wp6"]
 [ext_resource type="Texture2D" uid="uid://c2egs1tnh6do4" path="res://icon.svg" id="2_r5mp8"]
@@ -71,6 +72,7 @@ sub_emitter_frequency = 4.0
 sub_emitter_keep_velocity = true
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_gvnak")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -88,10 +90,17 @@ position = Vector2(-188, 64)
 scale = Vector2(10, 10)
 texture = ExtResource("1_r7wp6")
 
-[node name="Line2D3" type="Line2D" parent="."]
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="Line2D3" type="Line2D" parent="StaticBody2D3"]
+position = Vector2(-5112.25, -3696.16)
+scale = Vector2(2, 2)
 points = PackedVector2Array(-1920, 2576, -3744, 2672, -4192, 2888, -4216, 2944, -4176, 3008, 3680, 3000, 3896, 2936, 4056, 2840, 4176, 2728, 4264, 2600, 4320, 2480, 4352, 2360, 4352, 2248, 4336, 2144, 4296, 2048, 4208, 1936, 4120, 1872, 4016, 1808, 3912, 1776, 3808, 1768, 3704, 1768, 3544, 1824, 3512, 1888, 3480, 1960, 3496, 2064, 3528, 2144, 3552, 2232, 3544, 2320, 3512, 2384, 3440, 2400, 592, 2304, 528, 2304, 440, 2224, 264, 1760, 272, 1704, 288, 1648, 328, 1592, 368, 1560, 424, 1536, 480, 1536, 896, 1584, 992, 1592, 1096, 1592, 1192, 1560, 1288, 1520, 1376, 1448, 1448, 1360, 1512, 1240, 1544, 1144, 1544, 1048, 1536, 976, 1512, 888, 1456, 776, 1408, 696, 1328, 568, 1248, 448, 1176, 336, 1128, 224, 1096, 120, 1080, 24, 1080, -80, 1080, -168, 1096, -264, 1144, -384, 1200, -496, 1280, -600, 1376, -688, 1480, -760, 1608, -824, 1744, -864, 1912, -880, 3008, -808, 3256, -808, 3448, -840, 3568, -864, 3688, -904, 3776, -944, 3848, -1000, 3880, -1056, 3880, -1104, 3872, -1144, 3824, -1184, 3752, -1216, 2424, -1560, 520, -1304, 416, -1312, 352, -1336, 288, -1376, 208, -1448, 128, -1528, 64, -1624, 24, -1712, 8, -1776, 24, -1856, 72, -1920, 136, -1968, 200, -1984, 288, -1968, 368, -1920, 400, -1880, 456, -1800, 536, -1736, 616, -1712, 712, -1728, 776, -1776, 832, -1848, 872, -1928, 896, -2008, 880, -2136, 840, -2216, 792, -2288, 728, -2352, 632, -2416, 488, -2464, 320, -2480, 152, -2440, 48, -2392, -64, -2304, -120, -2240, -168, -2176)
 closed = true
 width = 300.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+polygon = PackedVector2Array(-9184, 1176, -12672, 1344, -13744, 1864, -13832, 2080, -13800, 2368, -13728, 2480, -13488, 2616, 2296, 2608, 2808, 2448, 3192, 2216, 3480, 1944, 3680, 1648, 3816, 1352, 3888, 1056, 3888, 760, 3848, 496, 3744, 240, 3512, -56, 3048, -344, 2784, -432, 2256, -472, 1760, -288, 1536, 184, 1584, 520, 1680, 792, -3944, 608, -3976, 576, -4280, -216, -4248, -288, -4208, -328, -3152, -216, -2872, -216, -2384, -392, -2144, -592, -1968, -800, -1808, -1104, -1720, -1352, -1728, -1656, -1744, -1816, -1808, -2040, -1976, -2352, -2360, -2960, -2496, -3160, -2576, -3352, -2624, -3504, -2664, -3688, -2648, -4024, -2624, -4160, -2456, -4536, -2304, -4720, -1992, -4960, -1776, -5064, -1568, -5128, -1264, -5160, 968, -5008, 1440, -5008, 2104, -5128, 2592, -5320, 2816, -5488, 2952, -5712, 2952, -6000, 2832, -6224, -264, -7120, -4176, -6592, -4784, -7312, -3920, -6776, -2800, -7208, -3448, -9216, -6072, -8880)
 
 [node name="Driver" parent="." instance=ExtResource("1_it855")]
 position = Vector2(536, 280)
@@ -157,7 +166,6 @@ process_material = SubResource("ParticleProcessMaterial_rkga0")
 texture = ExtResource("4_gyjwx")
 
 [node name="Line2D" type="Line2D" parent="."]
-visible = false
 texture_filter = 1
 position = Vector2(-776, 80)
 points = PackedVector2Array(776, -1160, 2696, -1160, 2264, -2064, 2696, -2928, 776, -2928, 760, -2320, 1256, -2280, 1368, -2080, 1280, -1840, 776, -1760)
@@ -170,7 +178,6 @@ end_cap_mode = 2
 antialiased = true
 
 [node name="Line2D2" type="Line2D" parent="."]
-visible = false
 texture_filter = 1
 position = Vector2(-776, 80)
 points = PackedVector2Array(3224, -736, 3176, -1056, 5840, -1016)
@@ -182,49 +189,37 @@ end_cap_mode = 2
 antialiased = true
 
 [node name="Lamp_Post" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(312, -1408)
 
 [node name="Lamp_Post2" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(336, -2544)
 
 [node name="Lamp_Post3" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(1320, -2504)
 
 [node name="Lamp_Post4" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(1352, -1432)
 
 [node name="Lamp_Post5" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(888, -672)
 
 [node name="Lamp_Post6" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(2048, -1992)
 
 [node name="Lamp_Post7" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(872, -3240)
 
 [node name="Lamp_Post8" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(-360, -1976)
 
 [node name="Lamp_Post9" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(2944, -1152)
 
 [node name="Lamp_Post10" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(3656, -592)
 
 [node name="Lamp_Post11" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(4360, -1152)
 
 [node name="Lamp_Post12" parent="." instance=ExtResource("5_6v6so")]
-visible = false
 position = Vector2(5072, -592)
