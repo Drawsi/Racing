@@ -1,4 +1,5 @@
 res://Scenes/testing_grounds.tscn
 res://Scenes/Driver.gdshader
 res://Scenes/Driver.tscn
-res://Scenes/testing_grounds.gd
+res://Scenes/lamp_post.tscn
+res://Scripts/CharacterBody2D.gd

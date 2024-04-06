@@ -12,4 +12,3 @@ DirectionalLight2D
 WorldEnvironment
 TextureRect
 GPUParticles2D
-Timer
