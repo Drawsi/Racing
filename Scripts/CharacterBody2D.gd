@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 var wheel_base = 70
 var steering_angle = 15
-var engine_power = 1200
-var friction = -20
+var engine_power = 1800
+var friction = -30
 var drag = -0.06
 var braking = -450
 var max_speed_reverse = 250
@@ -13,6 +13,9 @@ var traction_slow = 18
 
 var acceleration = Vector2.ZERO
 var steer_direction
+
+
+
 
 func _physics_process(delta):
 	acceleration = Vector2.ZERO
@@ -35,6 +38,7 @@ func get_input():
 	steer_direction = turn * deg_to_rad(steering_angle)
 	if Input.is_action_pressed("w"):
 		acceleration = transform.x * engine_power
+		$AudioStreamPlayer2D.play()
 	if Input.is_action_pressed("s"):
 		acceleration = transform.x * braking
 	
