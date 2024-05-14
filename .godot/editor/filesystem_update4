@@ -1,6 +1,6 @@
 res://Scenes/testing_grounds.tscn
 res://Scenes/Driver.gdshader
+res://Scripts/CharacterBody2D.gd
 res://Scenes/Driver.tscn
 res://Scenes/lamp_post.tscn
-res://Scripts/CharacterBody2D.gd
 res://Scenes/control.tscn

@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 var wheel_base = 70
-var steering_angle = 8
-var engine_power = 10
+var steering_angle = 10
+var engine_power = 1800
 var friction = -30
 var drag = -0.06
 var braking = -1800
@@ -55,10 +55,10 @@ func adjust_camera_zoom(delta):
 func calculate_steering(delta):
 	var target_steering_angle = steering_angle
 	
-	if velocity.length() > 500:
-		target_steering_angle = max_steering_angle
+	if velocity.length() > 800:
+		target_steering_angle = 8
 	else:
-		target_steering_angle = steering_angle
+		target_steering_angle = 12
 		
 	steering_angle = lerp(float(steering_angle), float(target_steering_angle), 0.2)
 	
