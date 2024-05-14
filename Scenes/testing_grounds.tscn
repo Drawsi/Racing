@@ -148,6 +148,7 @@ player_path = NodePath("../../Driver")
 metadata/_edit_lock_ = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+visible = false
 texture_filter = 1
 offset_left = 1408.0
 offset_top = 640.0

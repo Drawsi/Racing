@@ -3,3 +3,4 @@ res://Scenes/Driver.gdshader
 res://Scenes/Driver.tscn
 res://Scenes/lamp_post.tscn
 res://Scripts/CharacterBody2D.gd
+res://Scenes/control.tscn
