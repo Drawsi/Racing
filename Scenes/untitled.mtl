@@ -1,0 +1,308 @@
+# Blender MTL File: 'None'
+# Material Count: 28
+
+newmtl ASPHALT_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Asphalt010\\Asphalt010_Color.png
+
+newmtl BUILDING_DEFAULT_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.450980 0.274510
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Plaster002\\Plaster002_Color.jpg
+
+newmtl BUS_STOP_SIGN_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.490196 0.450980 0.023529
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+
+newmtl CONCRETE_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.274510 0.274510 0.274510
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Concrete034\\Concrete034_Color.jpg
+
+newmtl EARTH_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Ground042\\Ground042_Color.jpg
+
+newmtl ENTRANCE_DEFAULT_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\DE19F1FreisingDoor00005_small.png
+
+newmtl GLASS_WALL_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Facade005\\Facade005_Color.jpg
+
+newmtl GRASS_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Ground003\\Ground003_Color.jpg
+
+newmtl GRAVEL_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Gravel004\\Gravel004_Color.jpg
+
+newmtl MAT_0_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Asphalt010\\Asphalt010_Color.png
+
+newmtl MAT_0_1
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\road_marking_crossing.png
+
+newmtl MAT_1_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.274510 0.274510 0.274510
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Concrete034\\Concrete034_Color.jpg
+
+newmtl MAT_1_1
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\road_marking_crossing.png
+
+newmtl MAT_2_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Asphalt010\\Asphalt010_Color.png
+
+newmtl MAT_2_1
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\road_marking_dash.png
+
+newmtl MAT_3_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\PavingStones072\\PavingStones072_Color.jpg
+
+newmtl MAT_3_1
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\road_marking_crossing.png
+
+newmtl MAT_5_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.450980 0.274510
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Plaster002\\Plaster002_Color.jpg
+
+newmtl MAT_5_1
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\MarekCompositeWall00001_transparent.png
+
+newmtl MAT_6_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Asphalt010\\Asphalt010_Color.png
+
+newmtl MAT_6_1
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd map.obj_textures\\tex-helipad_markings-1870338942243080997.png
+
+newmtl PAVING_STONE_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\PavingStones072\\PavingStones072_Color.jpg
+
+newmtl PEBBLESTONE_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Rocks022\\Rocks022_Color.jpg
+
+newmtl POSTBOX_DEUTSCHEPOST_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.400000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+
+newmtl ROOF_DEFAULT_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.400000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\RoofingTiles010\\RoofingTiles010_Color.jpg
+
+newmtl STEEL_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Metal002\\Metal002_Color.jpg
+
+newmtl TARTAN_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.403922 0.215686 0.176471
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\Fabi2-putz1.png
+
+newmtl WOOD_0
+Ns 92.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.501961 0.501961 0.501961
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Emanuel\\Downloads\\OSM2World-latest-bin\\textures\\cc0textures\\Wood026\\Wood026_Color.jpg

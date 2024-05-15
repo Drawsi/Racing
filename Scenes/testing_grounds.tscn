@@ -1,13 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0hqkjjwsmu"]
+[gd_scene load_steps=20 format=3 uid="uid://b0hqkjjwsmu"]
 
 [ext_resource type="Script" path="res://Scenes/testing_grounds.gd" id="1_gvnak"]
 [ext_resource type="PackedScene" uid="uid://c2orfd7syn6st" path="res://Scenes/Driver.tscn" id="1_it855"]
 [ext_resource type="Texture2D" uid="uid://dm1opspj0rbvp" path="res://Images/Miscellaneous/9ckrbkqf.bmp" id="1_r7wp6"]
-[ext_resource type="Texture2D" uid="uid://c2egs1tnh6do4" path="res://icon.svg" id="2_r5mp8"]
 [ext_resource type="PackedScene" uid="uid://b8so74nq27r3" path="res://Scenes/control.tscn" id="3_5nur2"]
 [ext_resource type="Texture2D" uid="uid://bd2b8c7axdman" path="res://Images/Smoke/0.png" id="4_gyjwx"]
 [ext_resource type="PackedScene" uid="uid://bjhjdwdrp2b5k" path="res://Scenes/lamp_post.tscn" id="5_6v6so"]
 [ext_resource type="AudioStream" uid="uid://dfnwtdfh6ue0x" path="res://Audio/beatflip.wav" id="8_tviu6"]
+[ext_resource type="PackedScene" uid="uid://bdu0s34hq32l8" path="res://untitled.glb" id="9_4ip6r"]
 
 [sub_resource type="Gradient" id="Gradient_c2mjq"]
 offsets = PackedFloat32Array(0.136508, 0.473016, 0.95873)
@@ -26,12 +26,6 @@ generate_mipmaps = false
 seamless = true
 color_ramp = SubResource("Gradient_c2mjq")
 noise = SubResource("FastNoiseLite_s00yy")
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yoyxn"]
-polygon = PackedVector2Array(58, -62.8, 58, -61.5, 63, -57.5, 63, -55.4, 64, -54.4, 64, 54, 62.8, 58, 61.5, 58, 57.5, 63, 55.4, 63, 54.4, 64, -54.6, 64, -63, 57.5, -63, 55.4, -64, 54.4, -64, -54, -62.8, -58, -61.5, -58, -57.5, -63, -55.2, -63, -54, -63.6, 54, -64)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6x18h"]
-polygon = PackedVector2Array(58, -62.8, 58, -61.5, 63, -57.5, 63, -55.4, 64, -54.4, 64, 54, 62.8, 58, 61.5, 58, 57.5, 63, 55.4, 63, 54.4, 64, -54.6, 64, -63, 57.5, -63, 55.4, -64, 54.4, -64, -54, -62.8, -58, -61.5, -58, -57.5, -63, -55.2, -63, -54, -63.6, 54, -64)
 
 [sub_resource type="Curve" id="Curve_7ykvu"]
 _data = [Vector2(0.758842, 0.974968), 0.0, -2.59499, 0, 0, Vector2(0.971061, 0), -2.82455, 0.0, 0, 0]
@@ -72,6 +66,9 @@ sub_emitter_mode = 1
 sub_emitter_frequency = 4.0
 sub_emitter_keep_velocity = true
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_oxdej"]
+viewport_path = NodePath("SubViewport")
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_gvnak")
 
@@ -88,56 +85,10 @@ texture = SubResource("NoiseTexture2D_7x8no")
 position = Vector2(-188, 64)
 color = Color(0.364706, 0.364706, 0.364706, 1)
 
-[node name="track" type="Sprite2D" parent="."]
-scale = Vector2(10, 10)
-texture = ExtResource("1_r7wp6")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-
-[node name="Line2D3" type="Line2D" parent="StaticBody2D3"]
-position = Vector2(-5112.25, -3696.16)
-scale = Vector2(2, 2)
-points = PackedVector2Array(-1920, 2576, -3744, 2672, -4192, 2888, -4216, 2944, -4176, 3008, 3680, 3000, 3896, 2936, 4056, 2840, 4176, 2728, 4264, 2600, 4320, 2480, 4352, 2360, 4352, 2248, 4336, 2144, 4296, 2048, 4208, 1936, 4120, 1872, 4016, 1808, 3912, 1776, 3808, 1768, 3704, 1768, 3544, 1824, 3512, 1888, 3480, 1960, 3496, 2064, 3528, 2144, 3552, 2232, 3544, 2320, 3512, 2384, 3440, 2400, 592, 2304, 528, 2304, 440, 2224, 264.125, 1784.08, 272, 1704, 288, 1648, 328, 1592, 368, 1560, 424, 1536, 480, 1536, 896, 1584, 992, 1592, 1096, 1592, 1192, 1560, 1288, 1520, 1376, 1448, 1448, 1360, 1512, 1240, 1544, 1144, 1544, 1048, 1536, 976, 1512, 888, 1456, 776, 1408, 696, 1328, 568, 1248, 448, 1176, 336, 1128, 224, 1096, 120, 1080, 24, 1080, -80, 1080, -168, 1096, -264, 1144, -384, 1200, -496, 1280, -600, 1376, -688, 1480, -760, 1608, -824, 1744, -864, 1912, -880, 3008, -808, 3256, -808, 3448, -840, 3568, -864, 3688, -904, 3776, -944, 3848, -1000, 3880, -1056, 3880, -1104, 3872, -1144, 3824, -1184, 3752, -1216, 2424, -1560, 520, -1304, 416, -1312, 352, -1336, 288, -1376, 208, -1448, 128, -1528, 64, -1624, 24, -1712, 8, -1776, 24, -1856, 72, -1920, 136, -1968, 200, -1984, 288, -1968, 368, -1920, 400, -1880, 456, -1800, 536, -1736, 616, -1712, 712, -1728, 776, -1776, 832, -1848, 872, -1928, 896, -2008, 880, -2136, 840, -2216, 792, -2288, 728, -2352, 632, -2416, 488, -2464, 320, -2480, 152, -2440, 48, -2392, -64, -2304, -120, -2240, -168, -2176)
-closed = true
-width = 300.0
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
-build_mode = 1
-polygon = PackedVector2Array(-3840, -7432, -3632, -7752, -3992, -8256, -4872, -8208, -5288, -7624, -8744, 1744, -12536, 1928, -12672, 2016, 2200, 2000, 2576, 1880, 2856, 1728, 3032, 1536, 3272, 1112, 3240, 592, 2792, 192, 2400, 144, 2144, 224, 2280, 688, 2256, 1048, 2120, 1344, 1504, 1384, -4160, 1216, -4480, 920, -4888, -80, -4784, -616, -4328, -936, -3016, -808, -2552, -1024, -2296, -1512, -2680, -2344, -3208, -3328, -3208, -4344, -2432, -5384, -1544, -5736, -176, -5688, 1304, -5608, 2280, -5832, -288, -6528, -4088, -6008, -4712, -6200, -5376, -7136, -5240, -7672, -4696, -7984, -4160, -7720)
-one_way_collision = true
-
 [node name="Driver" parent="." instance=ExtResource("1_it855")]
 position = Vector2(536, 280)
 slide_on_ceiling = false
 floor_stop_on_slope = false
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(216, 336)
-metadata/_edit_group_ = true
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
-modulate = Color(0, 0, 0, 1)
-texture = ExtResource("2_r5mp8")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(64, -58.1, 64, 55, 55.7, 64, -56.3, 64, -64, 58, -64, 55, -64, -55.1, -58.1, -64, -55.5, -64, 55.1, -64)
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D"]
-occluder = SubResource("OccluderPolygon2D_yoyxn")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(896, 336)
-metadata/_edit_group_ = true
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D2"]
-modulate = Color(0, 0, 0, 1)
-texture = ExtResource("2_r5mp8")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-polygon = PackedVector2Array(64, -58.1, 64, 55, 55.7, 64, -56.3, 64, -64, 58, -64, 55, -64, -55.1, -58.1, -64, -55.5, -64, 55.1, -64)
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D2"]
-occluder = SubResource("OccluderPolygon2D_6x18h")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -165,6 +116,48 @@ tint_over = Color(0, 0, 0, 1)
 tint_progress = Color(1, 0, 0, 1)
 radial_initial_angle = 190.0
 
+[node name="Statics" type="Node2D" parent="."]
+
+[node name="Lamp_Post" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(312, -1408)
+
+[node name="Lamp_Post2" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(336, -2544)
+
+[node name="Lamp_Post3" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(1320, -2504)
+
+[node name="Lamp_Post4" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(1352, -1432)
+
+[node name="Lamp_Post5" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(888, -672)
+
+[node name="Lamp_Post6" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(2048, -1992)
+
+[node name="Lamp_Post7" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(872, -3240)
+
+[node name="Lamp_Post8" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(-360, -1976)
+
+[node name="Lamp_Post9" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(2944, -1152)
+
+[node name="Lamp_Post10" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(3656, -592)
+
+[node name="Lamp_Post11" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(4360, -1152)
+
+[node name="Lamp_Post12" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(5072, -592)
+
+[node name="track" type="Sprite2D" parent="Statics"]
+scale = Vector2(10, 10)
+texture = ExtResource("1_r7wp6")
+
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(704, 144)
 process_material = SubResource("ParticleProcessMaterial_rkga0")
@@ -182,55 +175,27 @@ begin_cap_mode = 2
 end_cap_mode = 2
 antialiased = true
 
-[node name="Line2D2" type="Line2D" parent="."]
-texture_filter = 1
-position = Vector2(-776, 80)
-points = PackedVector2Array(3224, -736, 3176, -1056, 5840, -1016)
-closed = true
-width = 550.0
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-antialiased = true
-
-[node name="Lamp_Post" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(312, -1408)
-
-[node name="Lamp_Post2" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(336, -2544)
-
-[node name="Lamp_Post3" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(1320, -2504)
-
-[node name="Lamp_Post4" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(1352, -1432)
-
-[node name="Lamp_Post5" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(888, -672)
-
-[node name="Lamp_Post6" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(2048, -1992)
-
-[node name="Lamp_Post7" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(872, -3240)
-
-[node name="Lamp_Post8" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(-360, -1976)
-
-[node name="Lamp_Post9" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(2944, -1152)
-
-[node name="Lamp_Post10" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(3656, -592)
-
-[node name="Lamp_Post11" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(4360, -1152)
-
-[node name="Lamp_Post12" parent="." instance=ExtResource("5_6v6so")]
-position = Vector2(5072, -592)
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_tviu6")
 volume_db = -7.308
 max_distance = 5320.0
 attenuation = 0.00728933
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(4000, 4000)
+size_2d_override = Vector2i(4000, 4000)
+size_2d_override_stretch = true
+
+[node name="untitled" parent="SubViewport" instance=ExtResource("9_4ip6r")]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -400, 1000, 50)
+current = true
+
+[node name="Screen" type="Sprite2D" parent="."]
+texture_filter = 2
+texture_repeat = 1
+position = Vector2(23768, 8600)
+scale = Vector2(50, 50)
+texture = SubResource("ViewportTexture_oxdej")
