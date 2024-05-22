@@ -82,6 +82,8 @@ sub_emitter_frequency = 4.0
 sub_emitter_keep_velocity = true
 
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 9
+collision_mask = 9
 script = ExtResource("1_vkb6g")
 
 [node name="Rear_Left_Wheel" type="Marker2D" parent="."]
@@ -161,7 +163,7 @@ collision_mask = 8
 
 [node name="F" type="RayCast2D" parent="Rays"]
 rotation = -1.57079
-target_position = Vector2(0, 1200)
+target_position = Vector2(0, 800)
 collision_mask = 8
 
 [node name="R" type="RayCast2D" parent="Rays"]

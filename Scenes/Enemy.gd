@@ -3,7 +3,7 @@ extends CharacterBody2D
 # Car configuration parameters
 var wheel_base = 70
 var steering_angle = 8.0
-var engine_power = 500
+var engine_power = 1400
 var friction = -15.0
 var drag = -0.03
 var braking = -1800
@@ -50,8 +50,11 @@ func get_input():
 	var L_col = $Rays/L.is_colliding()
 	var R_col = $Rays/R.is_colliding()
 	var turn = 0.0
+	var turning_strength = 2
+	# For going backwards
+	"""if L_col and R_col and F_col:
+			acceleration = transform.x * -100"""
 	
-	# Check for obstacles and adjust the turn value accordingly
 	if L_col and R_col:
 		# Obstacles on both sides, turn based on the closer obstacle
 		if L_dist < R_dist:
@@ -60,10 +63,10 @@ func get_input():
 			turn = (R_dist / max(L_dist, R_dist)) - 1.0
 	elif L_col:
 		# Obstacle on the left, turn right
-		turn = 1.0 - (L_dist / max(L_dist, 1.0))
+		turn = 1.0 
 	elif R_col:
 		# Obstacle on the right, turn left
-		turn = (R_dist / max(R_dist, 1.0)) - 1.0
+		turn =  - 1.0 
 	else:
 		# No obstacles detected, go straight
 		turn = 0.0
@@ -72,7 +75,7 @@ func get_input():
 	turn = clamp(turn, -1, 1)
 	
 	# Update the target steering direction based on the turn value
-	target_steer_direction = turn * deg_to_rad(steering_angle)
+	target_steer_direction = turn * turning_strength * deg_to_rad(steering_angle)
 
 
 	

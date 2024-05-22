@@ -25,7 +25,7 @@ position = Vector2(-188, 64)
 color = Color(0.364706, 0.364706, 0.364706, 1)
 
 [node name="Driver" parent="." instance=ExtResource("1_it855")]
-position = Vector2(2912, 1896)
+position = Vector2(5312, -2269)
 slide_on_ceiling = false
 floor_stop_on_slope = false
 
@@ -168,4 +168,4 @@ scale = Vector2(50, 50)
 texture = SubResource("ViewportTexture_oxdej")
 
 [node name="Enemy" parent="." instance=ExtResource("11_t1om5")]
-position = Vector2(481, 3238)
+position = Vector2(3813, -1664)
