@@ -15,11 +15,11 @@ metadata/_edit_group_ = true
 texture_filter = 1
 position = Vector2(0, 9.53674e-07)
 scale = Vector2(2.5, 2.5)
-color = Color(0.996078, 1, 0.686275, 1)
+color = Color(1, 1, 1, 0.509804)
 energy = 2.0
 shadow_enabled = true
 texture = ExtResource("1_jij55")
-texture_scale = 4.0
+texture_scale = 8.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 top_level = true
