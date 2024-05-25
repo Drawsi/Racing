@@ -3,7 +3,7 @@ extends CharacterBody2D
 # Car configuration parameters
 var wheel_base = 70
 var steering_angle = 8.0
-var engine_power = 1400
+var engine_power = 1800
 var friction = -15.0
 var drag = -0.03
 var braking = -1800

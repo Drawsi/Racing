@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://c2orfd7syn6st"]
 
-[ext_resource type="Script" path="res://Scripts/CharacterBody2D.gd" id="1_xd87t"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xd87t"]
 [ext_resource type="Shader" path="res://Scenes/Driver.gdshader" id="2_6m865"]
 [ext_resource type="Texture2D" uid="uid://0lralrsy83fu" path="res://Images/Miscellaneous/cars_normal.png" id="3_75cp6"]
 [ext_resource type="Texture2D" uid="uid://b06vyw74icr7j" path="res://Images/Smoke/1.png" id="3_lcp1w"]
@@ -80,7 +80,7 @@ sub_emitter_mode = 1
 sub_emitter_frequency = 4.0
 sub_emitter_keep_velocity = true
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_xd87t")
 
 [node name="Rear_Left_Wheel" type="Marker2D" parent="."]
@@ -110,7 +110,6 @@ rotation = -1.5708
 shape = SubResource("CapsuleShape2D_joo63")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_speed = 50.0

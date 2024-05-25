@@ -1,6 +1,9 @@
-res://Scenes/Enemy.tscn
+res://Scenes/testing_grounds.tscn
 res://Scenes/Driver.gdshader
 res://Scenes/testing_grounds.gdshader
-res://Scenes/testing_grounds.tscn
 res://Scenes/Driver.tscn
-res://Scenes/Enemy.gd
+res://Scenes/Enemy.tscn
+res://Scenes/track.tscn
+res://Scripts/GLOBAL.gd
+res://Scripts/Track.gd
+res://Scripts/testing_grounds.gd
