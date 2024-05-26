@@ -1,0 +1,129 @@
+[gd_scene load_steps=16 format=3 uid="uid://dhvsiuy4n8lo8"]
+
+[ext_resource type="Script" path="res://Trees.gd" id="1_wfo58"]
+[ext_resource type="Shader" path="res://Scenes/Trees.gdshader" id="2_q4hvj"]
+[ext_resource type="Texture2D" uid="uid://s6bedp1r38c3" path="res://Images/Trees/Paint Layer 1.PNG" id="2_t2ntd"]
+[ext_resource type="Texture2D" uid="uid://bt5ddvq4h480h" path="res://Images/Trees/Paint Layer 2.PNG" id="3_4mwy6"]
+[ext_resource type="Texture2D" uid="uid://omfx2nfgsyga" path="res://Images/Trees/Paint Layer 3.PNG" id="4_5ejfr"]
+[ext_resource type="Texture2D" uid="uid://3k0r0ugt8ul1" path="res://Images/Trees/Paint Layer 4.PNG" id="5_dqngy"]
+[ext_resource type="Texture2D" uid="uid://dcw8bpg06o32q" path="res://Images/Trees/Paint Layer 5.PNG" id="6_4ofhi"]
+[ext_resource type="Texture2D" uid="uid://cwuxxvimgoctj" path="res://Images/Trees/Paint Layer 6.PNG" id="7_lcydr"]
+[ext_resource type="Texture2D" uid="uid://c8dwkpqs4qvm6" path="res://Images/Trees/Paint Layer 7.PNG" id="8_rthm4"]
+[ext_resource type="Texture2D" uid="uid://bgtsmxk0ygn3s" path="res://Images/Trees/Paint Layer 8.PNG" id="9_ouvnd"]
+[ext_resource type="Texture2D" uid="uid://bu5uxxclmfvch" path="res://Images/Trees/Paint Layer 9.PNG" id="10_q37nm"]
+[ext_resource type="Texture2D" uid="uid://rq405i2suqen" path="res://Images/Trees/Paint Layer 10.PNG" id="11_iyg7k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t5l6f"]
+shader = ExtResource("2_q4hvj")
+shader_parameter/x_intensity = 3.0
+shader_parameter/y_intensity = 0.5
+shader_parameter/offset = 0.0
+shader_parameter/speed = 2.0
+shader_parameter/wave_frequency = 20.0
+shader_parameter/wave_length = 200.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p3gkl"]
+radius = 12.0416
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_btqjh"]
+polygon = PackedVector2Array(0, -10, 5, -10, 10, -5, 10, 0, 10, 5, 5, 10, 0, 10, -5, 10, -10, 5, -10, 0, -10, -5, -5, -10)
+
+[node name="Trees" type="StaticBody2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_wfo58")
+
+[node name="PaintLayer1" type="Sprite2D" parent="."]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+material = SubResource("ShaderMaterial_t5l6f")
+texture = ExtResource("2_t2ntd")
+
+[node name="PaintLayer2" type="Sprite2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+position = Vector2(1, 14)
+texture = ExtResource("3_4mwy6")
+
+[node name="PaintLayer3" type="Sprite2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+position = Vector2(0, 11)
+texture = ExtResource("4_5ejfr")
+
+[node name="PaintLayer4" type="Sprite2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+texture = ExtResource("5_dqngy")
+
+[node name="PaintLayer5" type="Sprite2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+position = Vector2(-6, -7)
+texture = ExtResource("6_4ofhi")
+
+[node name="PaintLayer6" type="Sprite2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+position = Vector2(-4, 8)
+texture = ExtResource("7_lcydr")
+
+[node name="PaintLayer7" type="Sprite2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+position = Vector2(7, -3)
+texture = ExtResource("8_rthm4")
+
+[node name="PaintLayer8" type="Sprite2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+position = Vector2(1, 8)
+texture = ExtResource("9_ouvnd")
+
+[node name="PaintLayer9" type="Sprite2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+position = Vector2(-2, 9)
+texture = ExtResource("10_q37nm")
+
+[node name="PaintLayer10" type="Sprite2D" parent="."]
+visible = false
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+texture_filter = 1
+position = Vector2(-6, 10)
+texture = ExtResource("11_iyg7k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_p3gkl")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_btqjh")
+occluder_light_mask = 9

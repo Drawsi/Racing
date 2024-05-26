@@ -13,13 +13,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if Global.finished:
-		Global.finished = false
 		$CanvasLayer/Anim.play("win")
+		Global.finished = false
 	match Global.laps:
 		3: $CanvasLayer/Lap/Change.texture = img1
 		2: $CanvasLayer/Lap/Change.texture = img2
 		1: $CanvasLayer/Lap/Change.texture = img3
-
+	
+	$CanvasLayer/Label.set_text(str(Engine.get_frames_per_second()))
+	
 func _on_timer_timeout():
 	$Driver.set_physics_process(true)
 	$Enemy.set_physics_process(true)

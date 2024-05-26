@@ -27,8 +27,10 @@ Global="*res://Scripts/GLOBAL.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
+window/size/mode=4
+window/size/resizable=false
 window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0
 
 [input]
@@ -58,6 +60,7 @@ s={
 
 2d_render/layer_1="Player"
 2d_render/layer_4="Enemy"
+2d_render/stdout/print_fps=false
 
 [physics]
 

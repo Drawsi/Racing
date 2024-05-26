@@ -1,0 +1,358 @@
+[gd_scene load_steps=24 format=3 uid="uid://b0hqkjjwsmu"]
+
+[ext_resource type="Script" path="res://Scripts/testing_grounds.gd" id="1_gvnak"]
+[ext_resource type="PackedScene" uid="uid://c2orfd7syn6st" path="res://Scenes/Driver.tscn" id="1_it855"]
+[ext_resource type="Texture2D" uid="uid://dm1opspj0rbvp" path="res://Images/Miscellaneous/9ckrbkqf.bmp" id="1_r7wp6"]
+[ext_resource type="PackedScene" uid="uid://b8so74nq27r3" path="res://Scenes/control.tscn" id="3_5nur2"]
+[ext_resource type="Texture2D" uid="uid://bd2b8c7axdman" path="res://Images/Smoke/0.png" id="4_gyjwx"]
+[ext_resource type="PackedScene" uid="uid://bjhjdwdrp2b5k" path="res://Scenes/lamp_post.tscn" id="5_6v6so"]
+[ext_resource type="Texture2D" uid="uid://1h8g6do3ehl5" path="res://Images/3.png" id="5_hdjll"]
+[ext_resource type="Texture2D" uid="uid://cos20lm280jhf" path="res://untitled_Asphalt010_Color.png" id="6_kwfcb"]
+[ext_resource type="Texture2D" uid="uid://d3vr3isyy8a3c" path="res://Images/2.png" id="6_lbldg"]
+[ext_resource type="Texture2D" uid="uid://c70a0sni01kbr" path="res://Images/1.png" id="7_ocqm4"]
+[ext_resource type="PackedScene" uid="uid://dj47kp8g6e101" path="res://Scenes/track.tscn" id="7_vu115"]
+[ext_resource type="Texture2D" uid="uid://div5hc3woviwa" path="res://Images/go.png" id="8_firp8"]
+[ext_resource type="AudioStream" uid="uid://dfnwtdfh6ue0x" path="res://Audio/beatflip.wav" id="8_tviu6"]
+[ext_resource type="PackedScene" uid="uid://bdu0s34hq32l8" path="res://untitled.glb" id="9_4ip6r"]
+[ext_resource type="Texture2D" uid="uid://c5caeipg0wlk4" path="res://Images/slash.png" id="9_e5faw"]
+[ext_resource type="Texture2D" uid="uid://b5ow1q35pt7e8" path="res://untitled_Plaster002_Color.jpg" id="10_6tq41"]
+[ext_resource type="PackedScene" uid="uid://dgq58u7esrr44" path="res://Scenes/Enemy.tscn" id="11_t1om5"]
+
+[sub_resource type="Animation" id="Animation_iwksg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Countee:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_lbldg")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Win:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Win:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Win:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_c5s5c"]
+resource_name = "start"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Countee:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5, 2.2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_hdjll"), ExtResource("6_lbldg"), ExtResource("7_ocqm4"), ExtResource("8_firp8"), null]
+}
+
+[sub_resource type="Animation" id="Animation_rb5fm"]
+resource_name = "win"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Win:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.155155, 0.121745), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Win:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(816, 506), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Win:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xsr13"]
+_data = {
+"RESET": SubResource("Animation_iwksg"),
+"start": SubResource("Animation_c5s5c"),
+"win": SubResource("Animation_rb5fm")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wmhj5"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oxdej"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_gvnak")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Darken" type="CanvasModulate" parent="."]
+position = Vector2(-188, 64)
+color = Color(0.364706, 0.364706, 0.364706, 1)
+
+[node name="Driver" parent="." instance=ExtResource("1_it855")]
+position = Vector2(701, -3917)
+rotation = -5.91031
+slide_on_ceiling = false
+floor_stop_on_slope = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("3_5nur2")]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+player_path = NodePath("../../Driver")
+metadata/_edit_lock_ = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+visible = false
+texture_filter = 1
+offset_left = 1408.0
+offset_top = 640.0
+offset_right = 1856.0
+offset_bottom = 1080.0
+max_value = 1000.0
+value = 321.0
+rounded = true
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = ExtResource("4_gyjwx")
+texture_progress = ExtResource("4_gyjwx")
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(1, 0, 0, 1)
+radial_initial_angle = 190.0
+
+[node name="Anim" type="AnimationPlayer" parent="CanvasLayer"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_xsr13")
+}
+autoplay = "start"
+
+[node name="Countee" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(1023, 519)
+scale = Vector2(10, 10)
+texture = ExtResource("6_lbldg")
+
+[node name="Lap" type="Polygon2D" parent="CanvasLayer"]
+position = Vector2(281, 903)
+scale = Vector2(2, 2)
+color = Color(1, 0.858824, 0.992157, 0.564706)
+polygon = PackedVector2Array(-55.5, -40.5, -4, -46.5, 81.5, -20.5, 89.5, 31.5, 20.5, 50, -38, 37, -74.5, 16)
+
+[node name="Slash" type="Sprite2D" parent="CanvasLayer/Lap"]
+texture_filter = 1
+texture = ExtResource("9_e5faw")
+
+[node name="Change" type="Sprite2D" parent="CanvasLayer/Lap"]
+texture_filter = 1
+position = Vector2(-39, -1)
+texture = ExtResource("7_ocqm4")
+
+[node name="3" type="Sprite2D" parent="CanvasLayer/Lap"]
+texture_filter = 1
+position = Vector2(49, 5)
+texture = ExtResource("5_hdjll")
+
+[node name="Win" type="Polygon2D" parent="CanvasLayer"]
+visible = false
+texture = ExtResource("10_6tq41")
+polygon = PackedVector2Array(71, 330, 1804, 90, 1836, 765, 165, 869)
+
+[node name="Label" type="Label" parent="CanvasLayer/Win"]
+offset_left = 552.0
+offset_top = 405.0
+offset_right = 1368.0
+offset_bottom = 610.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = -10
+theme_override_constants/outline_size = 40
+theme_override_constants/shadow_outline_size = 50
+theme_override_font_sizes/font_size = 150
+text = "YOU WON!!
+"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="track" type="Sprite2D" parent="."]
+position = Vector2(216, 1552)
+scale = Vector2(21, 23.392)
+texture = ExtResource("1_r7wp6")
+metadata/_edit_lock_ = true
+
+[node name="Screen2" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(473, 2166)
+scale = Vector2(10, 10)
+texture = ExtResource("6_kwfcb")
+metadata/_edit_lock_ = true
+
+[node name="Track" parent="." instance=ExtResource("7_vu115")]
+metadata/_edit_lock_ = true
+
+[node name="Statics" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Lamp_Post2" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(40, -5592)
+
+[node name="Lamp_Post3" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(1496, 3808)
+
+[node name="Lamp_Post13" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(7744, 4480)
+
+[node name="Lamp_Post14" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(2904, 6168)
+
+[node name="Lamp_Post15" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(-2736, 6304)
+
+[node name="Lamp_Post16" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(-7344, 5824)
+
+[node name="Lamp_Post17" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(-3840, 2929)
+
+[node name="Lamp_Post19" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(-2334, 4210)
+
+[node name="Lamp_Post20" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(-5110, 4466)
+
+[node name="Lamp_Post21" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(1427, 443)
+
+[node name="Lamp_Post18" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(6376, -2122)
+
+[node name="Lamp_Post5" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(-1824, 1616)
+
+[node name="Lamp_Post9" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(-2580, -515)
+
+[node name="Lamp_Post6" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(2192, 2248)
+
+[node name="Lamp_Post7" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(480, -3464)
+
+[node name="Lamp_Post8" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(-688, -1888)
+
+[node name="Lamp_Post10" parent="Statics" instance=ExtResource("5_6v6so")]
+position = Vector2(3096, -872)
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(-776, 80)
+points = PackedVector2Array(776, -1160, 2696, -1160, 2264, -2064, 2696, -2928, 776, -2928, 760, -2320, 1256, -2280, 1368, -2080, 1280, -1840, 776, -1760)
+closed = true
+width = 550.0
+default_color = Color(0.94902, 0.811765, 0.941176, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_tviu6")
+volume_db = -7.308
+max_distance = 5320.0
+attenuation = 0.00728933
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(4000, 4000)
+size_2d_override = Vector2i(4000, 4000)
+size_2d_override_stretch = true
+
+[node name="untitled" parent="SubViewport" instance=ExtResource("9_4ip6r")]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -400, 1000, 50)
+current = true
+
+[node name="Screen" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_wmhj5")
+use_parent_material = true
+position = Vector2(-29224, 9624)
+scale = Vector2(50, 50)
+texture = SubResource("ViewportTexture_oxdej")
+
+[node name="Enemy" parent="." instance=ExtResource("11_t1om5")]
+position = Vector2(634, -3704)
+rotation = -6.01104
+collision_layer = 8
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

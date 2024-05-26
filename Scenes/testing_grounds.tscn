@@ -1,11 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://b0hqkjjwsmu"]
+[gd_scene load_steps=23 format=3 uid="uid://b0hqkjjwsmu"]
 
 [ext_resource type="Script" path="res://Scripts/testing_grounds.gd" id="1_gvnak"]
 [ext_resource type="PackedScene" uid="uid://c2orfd7syn6st" path="res://Scenes/Driver.tscn" id="1_it855"]
 [ext_resource type="Texture2D" uid="uid://dm1opspj0rbvp" path="res://Images/Miscellaneous/9ckrbkqf.bmp" id="1_r7wp6"]
 [ext_resource type="PackedScene" uid="uid://b8so74nq27r3" path="res://Scenes/control.tscn" id="3_5nur2"]
 [ext_resource type="Texture2D" uid="uid://bd2b8c7axdman" path="res://Images/Smoke/0.png" id="4_gyjwx"]
-[ext_resource type="PackedScene" uid="uid://bjhjdwdrp2b5k" path="res://Scenes/lamp_post.tscn" id="5_6v6so"]
 [ext_resource type="Texture2D" uid="uid://1h8g6do3ehl5" path="res://Images/3.png" id="5_hdjll"]
 [ext_resource type="Texture2D" uid="uid://cos20lm280jhf" path="res://untitled_Asphalt010_Color.png" id="6_kwfcb"]
 [ext_resource type="Texture2D" uid="uid://d3vr3isyy8a3c" path="res://Images/2.png" id="6_lbldg"]
@@ -146,8 +145,9 @@ one_shot = true
 autostart = true
 
 [node name="Darken" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2(-188, 64)
-color = Color(0.364706, 0.364706, 0.364706, 1)
+color = Color(0.219501, 0.219501, 0.219501, 1)
 
 [node name="Driver" parent="." instance=ExtResource("1_it855")]
 position = Vector2(701, -3917)
@@ -201,14 +201,15 @@ scale = Vector2(2, 2)
 color = Color(1, 0.858824, 0.992157, 0.564706)
 polygon = PackedVector2Array(-55.5, -40.5, -4, -46.5, 81.5, -20.5, 89.5, 31.5, 20.5, 50, -38, 37, -74.5, 16)
 
-[node name="Slash" type="Sprite2D" parent="CanvasLayer/Lap"]
-texture_filter = 1
-texture = ExtResource("9_e5faw")
-
 [node name="Change" type="Sprite2D" parent="CanvasLayer/Lap"]
 texture_filter = 1
 position = Vector2(-39, -1)
 texture = ExtResource("7_ocqm4")
+
+[node name="Slash" type="Sprite2D" parent="CanvasLayer/Lap"]
+texture_filter = 1
+position = Vector2(4, -0.5)
+texture = ExtResource("9_e5faw")
 
 [node name="3" type="Sprite2D" parent="CanvasLayer/Lap"]
 texture_filter = 1
@@ -236,7 +237,12 @@ theme_override_font_sizes/font_size = 150
 text = "YOU WON!!
 "
 
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="track" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(216, 1552)
 scale = Vector2(21, 23.392)
 texture = ExtResource("1_r7wp6")
@@ -245,67 +251,12 @@ metadata/_edit_lock_ = true
 [node name="Screen2" type="Sprite2D" parent="."]
 texture_filter = 2
 position = Vector2(473, 2166)
-scale = Vector2(10, 10)
+scale = Vector2(15, 15)
 texture = ExtResource("6_kwfcb")
 metadata/_edit_lock_ = true
 
 [node name="Track" parent="." instance=ExtResource("7_vu115")]
 metadata/_edit_lock_ = true
-
-[node name="Statics" type="Node2D" parent="."]
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Lamp_Post2" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(40, -5592)
-
-[node name="Lamp_Post3" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(1496, 3808)
-
-[node name="Lamp_Post13" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(7744, 4480)
-
-[node name="Lamp_Post14" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(2904, 6168)
-
-[node name="Lamp_Post15" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(-2736, 6304)
-
-[node name="Lamp_Post16" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(-7344, 5824)
-
-[node name="Lamp_Post17" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(-3840, 2929)
-
-[node name="Lamp_Post19" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(-2334, 4210)
-
-[node name="Lamp_Post20" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(-5110, 4466)
-
-[node name="Lamp_Post21" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(1427, 443)
-
-[node name="Lamp_Post18" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(6376, -2122)
-
-[node name="Lamp_Post5" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(-1824, 1616)
-
-[node name="Lamp_Post9" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(-2580, -515)
-
-[node name="Lamp_Post6" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(2192, 2248)
-
-[node name="Lamp_Post7" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(480, -3464)
-
-[node name="Lamp_Post8" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(-688, -1888)
-
-[node name="Lamp_Post10" parent="Statics" instance=ExtResource("5_6v6so")]
-position = Vector2(3096, -872)
 
 [node name="Line2D" type="Line2D" parent="."]
 visible = false

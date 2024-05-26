@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bd0mue6w43yeh"
+path="res://.godot/imported/Full Song Bolero.output.wav-e40c7e50ace94a47b3f9a8ae8f09f337.sample"
+
+[deps]
+
+source_file="res://Sounds/Full Song Bolero.output.wav"
+dest_files=["res://.godot/imported/Full Song Bolero.output.wav-e40c7e50ace94a47b3f9a8ae8f09f337.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
