@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2orfd7syn6st"]
+[gd_scene load_steps=9 format=3 uid="uid://c2orfd7syn6st"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xd87t"]
 [ext_resource type="Texture2D" uid="uid://0lralrsy83fu" path="res://Images/Miscellaneous/cars_normal.png" id="3_75cp6"]
 [ext_resource type="Texture2D" uid="uid://dkngb7v0n521u" path="res://Images/Miscellaneous/bk_cars1.a.png" id="3_ur2rs"]
 [ext_resource type="Texture2D" uid="uid://bmhrempptumcc" path="res://Images/Miscellaneous/cars.png" id="4_oi5r8"]
 [ext_resource type="Texture2D" uid="uid://durwfx1x2x473" path="res://Images/Lights/long_beam_hd.png" id="7_q3do8"]
-[ext_resource type="AudioStream" uid="uid://10builabfbxu" path="res://Audio/speed.mp3" id="8_qqlsu"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_1vk4j"]
 diffuse_texture = ExtResource("3_ur2rs")
@@ -75,7 +74,3 @@ energy = 0.5
 shadow_enabled = true
 texture = ExtResource("7_q3do8")
 offset = Vector2(0, -250)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_qqlsu")
-volume_db = -80.0

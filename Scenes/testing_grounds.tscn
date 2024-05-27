@@ -1,8 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://b0hqkjjwsmu"]
+[gd_scene load_steps=21 format=3 uid="uid://b0hqkjjwsmu"]
 
 [ext_resource type="Script" path="res://Scripts/testing_grounds.gd" id="1_gvnak"]
 [ext_resource type="PackedScene" uid="uid://c2orfd7syn6st" path="res://Scenes/Driver.tscn" id="1_it855"]
-[ext_resource type="Texture2D" uid="uid://dm1opspj0rbvp" path="res://Images/Miscellaneous/9ckrbkqf.bmp" id="1_r7wp6"]
 [ext_resource type="PackedScene" uid="uid://b8so74nq27r3" path="res://Scenes/control.tscn" id="3_5nur2"]
 [ext_resource type="Texture2D" uid="uid://bd2b8c7axdman" path="res://Images/Smoke/0.png" id="4_gyjwx"]
 [ext_resource type="Texture2D" uid="uid://1h8g6do3ehl5" path="res://Images/3.png" id="5_hdjll"]
@@ -11,11 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://c70a0sni01kbr" path="res://Images/1.png" id="7_ocqm4"]
 [ext_resource type="PackedScene" uid="uid://dj47kp8g6e101" path="res://Scenes/track.tscn" id="7_vu115"]
 [ext_resource type="Texture2D" uid="uid://div5hc3woviwa" path="res://Images/go.png" id="8_firp8"]
-[ext_resource type="AudioStream" uid="uid://dfnwtdfh6ue0x" path="res://Audio/beatflip.wav" id="8_tviu6"]
-[ext_resource type="PackedScene" uid="uid://bdu0s34hq32l8" path="res://untitled.glb" id="9_4ip6r"]
 [ext_resource type="Texture2D" uid="uid://c5caeipg0wlk4" path="res://Images/slash.png" id="9_e5faw"]
-[ext_resource type="Texture2D" uid="uid://b5ow1q35pt7e8" path="res://untitled_Plaster002_Color.jpg" id="10_6tq41"]
 [ext_resource type="PackedScene" uid="uid://dgq58u7esrr44" path="res://Scenes/Enemy.tscn" id="11_t1om5"]
+[ext_resource type="Shader" path="res://Scenes/testing_grounds.gdshader" id="13_4521u"]
+[ext_resource type="Texture2D" uid="uid://c2egs1tnh6do4" path="res://icon.svg" id="14_kpy41"]
+[ext_resource type="AudioStream" uid="uid://45ep3mqltsob" path="res://Audio/bg_music.output.mp3" id="14_nat0n"]
 
 [sub_resource type="Animation" id="Animation_iwksg"]
 length = 0.001
@@ -67,6 +66,30 @@ tracks/3/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Won:theme_override_font_sizes/font_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [116]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/Won:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_c5s5c"]
 resource_name = "start"
@@ -86,7 +109,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_rb5fm"]
 resource_name = "win"
-length = 3.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -97,7 +120,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.155155, 0.121745), Vector2(1, 1)]
+"values": [Vector2(0.127, 0.1), Vector2(15, 8.4375)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -109,7 +132,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(816, 506), Vector2(0, 0)]
+"values": [Vector2(816, 506), Vector2(960, 540)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -118,10 +141,34 @@ tracks/2/path = NodePath("CanvasLayer/Win:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/Won:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Won:theme_override_font_sizes/font_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 116]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xsr13"]
@@ -131,29 +178,45 @@ _data = {
 "win": SubResource("Animation_rb5fm")
 }
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wmhj5"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eb0q2"]
+shader = ExtResource("13_4521u")
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/firework_count = 10.0
+shader_parameter/particle_count = 10.0
+shader_parameter/size = 3.0
+shader_parameter/sharpen = 1.5
+shader_parameter/speed = 2.0
+shader_parameter/gravity = 0.9
+shader_parameter/lifetime = 3.0
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_oxdej"]
-viewport_path = NodePath("SubViewport")
-
-[node name="Node2D" type="Node2D"]
+[node name="World" type="Node2D"]
 script = ExtResource("1_gvnak")
+
+[node name="BG" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(473, 2166)
+scale = Vector2(15, 15)
+texture = ExtResource("6_kwfcb")
+metadata/_edit_lock_ = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
 autostart = true
 
-[node name="Darken" type="CanvasModulate" parent="."]
-visible = false
-position = Vector2(-188, 64)
-color = Color(0.219501, 0.219501, 0.219501, 1)
+[node name="Track" parent="." instance=ExtResource("7_vu115")]
+metadata/_edit_lock_ = true
 
 [node name="Driver" parent="." instance=ExtResource("1_it855")]
 position = Vector2(701, -3917)
 rotation = -5.91031
 slide_on_ceiling = false
 floor_stop_on_slope = false
+
+[node name="Enemy" parent="." instance=ExtResource("11_t1om5")]
+position = Vector2(634, -3704)
+rotation = 0.272145
+collision_layer = 8
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -216,90 +279,97 @@ texture_filter = 1
 position = Vector2(49, 5)
 texture = ExtResource("5_hdjll")
 
-[node name="Win" type="Polygon2D" parent="CanvasLayer"]
+[node name="Win" type="Sprite2D" parent="CanvasLayer"]
 visible = false
-texture = ExtResource("10_6tq41")
-polygon = PackedVector2Array(71, 330, 1804, 90, 1836, 765, 165, 869)
+material = SubResource("ShaderMaterial_eb0q2")
+texture = ExtResource("14_kpy41")
 
-[node name="Label" type="Label" parent="CanvasLayer/Win"]
-offset_left = 552.0
-offset_top = 405.0
-offset_right = 1368.0
-offset_bottom = 610.0
+[node name="Won" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -79.0
+offset_right = 300.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 10
-theme_override_constants/shadow_offset_y = -10
-theme_override_constants/outline_size = 40
-theme_override_constants/shadow_outline_size = 50
-theme_override_font_sizes/font_size = 150
-text = "YOU WON!!
-"
+theme_override_colors/font_shadow_color = Color(0.972549, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.0235294, 0.945098, 0.945098, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 116
+text = "You Won!"
+uppercase = true
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Lost" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -218.0
+offset_right = 320.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.972549, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.0235294, 0.945098, 0.945098, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 116
+text = "You Lost!"
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Lost"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -505.0
+offset_top = 76.0
+offset_right = 505.0
+offset_bottom = 242.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 400
+
+[node name="RETRY" type="Button" parent="CanvasLayer/Lost/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.0235294, 0.945098, 0.945098, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 116
+text = "RETRY"
+flat = true
+
+[node name="MENU" type="Button" parent="CanvasLayer/Lost/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.0235294, 0.945098, 0.945098, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 116
+text = "MENU"
+flat = true
+
+[node name="Fps" type="Label" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="track" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(216, 1552)
-scale = Vector2(21, 23.392)
-texture = ExtResource("1_r7wp6")
-metadata/_edit_lock_ = true
-
-[node name="Screen2" type="Sprite2D" parent="."]
-texture_filter = 2
-position = Vector2(473, 2166)
-scale = Vector2(15, 15)
-texture = ExtResource("6_kwfcb")
-metadata/_edit_lock_ = true
-
-[node name="Track" parent="." instance=ExtResource("7_vu115")]
-metadata/_edit_lock_ = true
-
-[node name="Line2D" type="Line2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(-776, 80)
-points = PackedVector2Array(776, -1160, 2696, -1160, 2264, -2064, 2696, -2928, 776, -2928, 760, -2320, 1256, -2280, 1368, -2080, 1280, -1840, 776, -1760)
-closed = true
-width = 550.0
-default_color = Color(0.94902, 0.811765, 0.941176, 1)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-antialiased = true
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_tviu6")
-volume_db = -7.308
-max_distance = 5320.0
-attenuation = 0.00728933
-
-[node name="SubViewport" type="SubViewport" parent="."]
-transparent_bg = true
-size = Vector2i(4000, 4000)
-size_2d_override = Vector2i(4000, 4000)
-size_2d_override_stretch = true
-
-[node name="untitled" parent="SubViewport" instance=ExtResource("9_4ip6r")]
-
-[node name="Camera3D" type="Camera3D" parent="SubViewport"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -400, 1000, 50)
-current = true
-
-[node name="Screen" type="Sprite2D" parent="."]
-visible = false
-material = SubResource("CanvasItemMaterial_wmhj5")
-use_parent_material = true
-position = Vector2(-29224, 9624)
-scale = Vector2(50, 50)
-texture = SubResource("ViewportTexture_oxdej")
-
-[node name="Enemy" parent="." instance=ExtResource("11_t1om5")]
-position = Vector2(634, -3704)
-rotation = -6.01104
-collision_layer = 8
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_nat0n")
+volume_db = -80.0
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Lost/HBoxContainer/RETRY" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="CanvasLayer/Lost/HBoxContainer/MENU" to="." method="_on_menu_pressed"]

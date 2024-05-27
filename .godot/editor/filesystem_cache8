@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716726119
+::res://::1716807704
+default_bus_layout.tres::AudioBusLayout::2991079766492835540::1716797589::0::1::::<><>::
 icon.svg::CompressedTexture2D::6676595498435827405::1707760161::1715711127::1::::<><>::
 README.md::TextFile::-1::1711493294::0::1::::<><>::
-untitled.glb::PackedScene::2639826354591537027::1715788549::1715788592::1::::<><>::uid://cos20lm280jhf::::res://untitled_Asphalt010_Color.png<>uid://b0urjgr7jd1kp::::res://untitled_Ground003_Color.jpg<>uid://2417amqs3sm7::::res://untitled_PavingStones072_Color.jpg<>uid://8l8nlknpl7yu::::res://untitled_Metal002_Color.jpg<>uid://blwewtuj8nfhw::::res://untitled_Concrete034_Color.jpg<>uid://c6g08s16176qp::::res://untitled_road_marking_crossing.png<>uid://3eodypgkdd2j::::res://untitled_road_marking_dash.png<>uid://iku0uydcocvs::::res://untitled_Ground042_Color.jpg<>uid://bpciyh2dxkpj5::::res://untitled_Wood026_Color.jpg<>uid://ckgeujs21q6ti::::res://untitled_Gravel004_Color.jpg<>uid://c8qcgbfubpns6::::res://untitled_Rocks022_Color.jpg<>uid://b5ow1q35pt7e8::::res://untitled_Plaster002_Color.jpg<>uid://be2jkhe32ul8v::::res://untitled_RoofingTiles010_Color.jpg<>uid://drt5fi4oi8jom::::res://untitled_DE19F1FreisingDoor00005_small.png<>uid://vvwyntxg4huu::::res://untitled_MarekCompositeWall00001_transparent.png
 untitled_Asphalt010_Color.png::CompressedTexture2D::5794328579110401743::1715788549::1716376224::1::::<><>::
 untitled_Concrete034_Color.jpg::CompressedTexture2D::3204197459031021872::1715788559::1715788592::1::::<><>::
 untitled_DE19F1FreisingDoor00005_small.png::CompressedTexture2D::8393526474639731604::1715788575::1715788592::1::::<><>::
@@ -15,12 +15,9 @@ untitled_PavingStones072_Color.jpg::CompressedTexture2D::1956601539601288192::17
 untitled_Plaster002_Color.jpg::CompressedTexture2D::4522370370885316593::1715788570::1715788593::1::::<><>::
 untitled_road_marking_crossing.png::CompressedTexture2D::6962659629737342251::1715788559::1715788592::1::::<><>::
 untitled_road_marking_dash.png::CompressedTexture2D::1974401812180158947::1715788559::1715788592::1::::<><>::
-untitled_Rocks022_Color.jpg::CompressedTexture2D::7122235461413211775::1715788567::1715788593::1::::<><>::
-untitled_RoofingTiles010_Color.jpg::CompressedTexture2D::2723478943630533235::1715788572::1715788593::1::::<><>::
-untitled_Wood026_Color.jpg::CompressedTexture2D::3443911098308178540::1715788563::1715788593::1::::<><>::
-::res://Audio/::1712396986
-beatflip.wav::AudioStreamWAV::7538413049651635881::1712396954::1712396986::1::::<><>::
-speed.mp3::AudioStreamMP3::1876616248492385310::1712396954::1712396985::1::::<><>::
+::res://Audio/::1716802072
+bg_music.output.mp3::AudioStreamMP3::2097678942938263277::1716797712::1716797712::1::::<><>::
+birds_outside_002_wide.wav::AudioStreamWAV::1365888012458985339::1716800646::1716800652::1::::<><>::
 ::res://Images/::1716726119
 1.png::CompressedTexture2D::7070539418403040507::1716575843::1716575910::1::::<><>::
 2.png::CompressedTexture2D::9168984246002933058::1716575854::1716575910::1::::<><>::
@@ -49,7 +46,7 @@ street_h.png::CompressedTexture2D::1911018443984326991::1711536171::1711536171::
 0.png::CompressedTexture2D::2652845216669749317::1711483528::1711486748::1::::<><>::
 1.png::CompressedTexture2D::4206456607197438781::1711483528::1711486748::1::::<><>::
 2.png::CompressedTexture2D::7772003169292742405::1711483528::1711486748::1::::<><>::
-::res://Images/Trees/::1716726108
+::res://Images/Trees/::1716726120
 Paint Layer 1.PNG::CompressedTexture2D::1327462937976116180::1716726108::1716726120::1::::<><>::
 Paint Layer 2.PNG::CompressedTexture2D::3782128682832907861::1716726108::1716726120::1::::<><>::
 Paint Layer 3.PNG::CompressedTexture2D::1007762440653657468::1716726108::1716726120::1::::<><>::
@@ -60,27 +57,29 @@ Paint Layer 7.PNG::CompressedTexture2D::7096620785907729051::1716726108::1716726
 Paint Layer 8.PNG::CompressedTexture2D::2847892482898393166::1716726108::1716726120::1::::<><>::
 Paint Layer 9.PNG::CompressedTexture2D::3853385513833392615::1716726108::1716726120::1::::<><>::
 Paint Layer 10.PNG::CompressedTexture2D::1228047412859911669::1716726108::1716726120::1::::<><>::
-::res://Scenes/::1716635896
+::res://Scenes/::1716807676
 control.tscn::PackedScene::139432942666143254::1715785769::0::1::::<><>::res://Scripts/Control.gd
-drag_line.tscn::PackedScene::1898149103113542903::1711486790::0::1::::<><>::res://Scripts/Line2D.gd<>uid://j5aur5u485rh::::res://Images/Miscellaneous/line2.png
-drift_line.tscn::PackedScene::7054899154820761566::1711492413::0::1::::<><>::res://Scripts/Drift_Line.gd
-Driver.gdshader::Shader::-1::1716635896::0::1::::<><>::
-Driver.tscn::PackedScene::6697882759870716571::1716635749::0::1::::<><>::res://Scripts/Player.gd<>res://Scenes/Driver.gdshader<>uid://0lralrsy83fu::::res://Images/Miscellaneous/cars_normal.png<>uid://b06vyw74icr7j::::res://Images/Smoke/1.png<>uid://dkngb7v0n521u::::res://Images/Miscellaneous/bk_cars1.a.png<>uid://bmhrempptumcc::::res://Images/Miscellaneous/cars.png<>uid://durwfx1x2x473::::res://Images/Lights/long_beam_hd.png<>uid://10builabfbxu::::res://Audio/speed.mp3
-Enemy.tscn::PackedScene::7615306698061538147::1716635749::0::1::::<><>::res://Scenes/Driver.gdshader<>res://Scripts/Enemy.gd<>uid://dkngb7v0n521u::::res://Images/Miscellaneous/bk_cars1.a.png<>uid://0lralrsy83fu::::res://Images/Miscellaneous/cars_normal.png<>uid://bmhrempptumcc::::res://Images/Miscellaneous/cars.png<>uid://durwfx1x2x473::::res://Images/Lights/long_beam_hd.png<>uid://10builabfbxu::::res://Audio/speed.mp3
-lamp_post.tscn::PackedScene::3033123891972050866::1716375845::0::1::::<><>::uid://34hnatjkfvn4::::res://Images/Lights/point.png<>uid://bu6dvf8arkhsc::::res://Images/Miscellaneous/lamp_post.png
+drift_line.tscn::PackedScene::7054899154820761566::1716798061::0::1::::<><>::res://Scripts/Drift_Line.gd
+Driver.tscn::PackedScene::6697882759870716571::1716807580::0::1::::<><>::res://Scripts/Player.gd<>uid://0lralrsy83fu::::res://Images/Miscellaneous/cars_normal.png<>uid://dkngb7v0n521u::::res://Images/Miscellaneous/bk_cars1.a.png<>uid://bmhrempptumcc::::res://Images/Miscellaneous/cars.png<>uid://durwfx1x2x473::::res://Images/Lights/long_beam_hd.png
+Enemy.tscn::PackedScene::7615306698061538147::1716807580::0::1::::<><>::res://Scripts/Enemy.gd<>uid://dkngb7v0n521u::::res://Images/Miscellaneous/bk_cars1.a.png<>uid://0lralrsy83fu::::res://Images/Miscellaneous/cars_normal.png<>uid://bmhrempptumcc::::res://Images/Miscellaneous/cars.png<>uid://durwfx1x2x473::::res://Images/Lights/long_beam_hd.png
+enter.gd::GDScript::-1::1716801720::0::1::::<>Control<>::
+enter.gdshader::Shader::-1::1716807676::0::1::::<><>::
+enter.tscn::PackedScene::7874087770983613948::1716807579::0::1::::<><>::res://Scenes/enter.gd<>res://Scenes/enter.gdshader
+lamp_post.tscn::PackedScene::3033123891972050866::1716807580::0::1::::<><>::uid://34hnatjkfvn4::::res://Images/Lights/point.png<>uid://bu6dvf8arkhsc::::res://Images/Miscellaneous/lamp_post.png
 map.tscn::PackedScene::503253322930251776::1716375845::0::1::::<><>::uid://bdu0s34hq32l8::::res://untitled.glb
 setting_slider.tscn::PackedScene::534529025209459007::1710342504::0::1::::<><>::
-testing_grounds.gdshader::Shader::-1::1716635896::0::1::::<><>::
-testing_grounds.tscn::PackedScene::3595659374033876::1716635892::0::1::::<><>::res://Scripts/testing_grounds.gd<>uid://c2orfd7syn6st::::res://Scenes/Driver.tscn<>uid://dm1opspj0rbvp::::res://Images/Miscellaneous/9ckrbkqf.bmp<>uid://b8so74nq27r3::::res://Scenes/control.tscn<>uid://bd2b8c7axdman::::res://Images/Smoke/0.png<>uid://bjhjdwdrp2b5k::::res://Scenes/lamp_post.tscn<>uid://1h8g6do3ehl5::::res://Images/3.png<>uid://cos20lm280jhf::::res://untitled_Asphalt010_Color.png<>uid://d3vr3isyy8a3c::::res://Images/2.png<>uid://c70a0sni01kbr::::res://Images/1.png<>uid://dj47kp8g6e101::::res://Scenes/track.tscn<>uid://div5hc3woviwa::::res://Images/go.png<>uid://dfnwtdfh6ue0x::::res://Audio/beatflip.wav<>uid://bdu0s34hq32l8::::res://untitled.glb<>uid://c5caeipg0wlk4::::res://Images/slash.png<>uid://b5ow1q35pt7e8::::res://untitled_Plaster002_Color.jpg<>uid://dgq58u7esrr44::::res://Scenes/Enemy.tscn
-track.tscn::PackedScene::7852790239539928932::1716635749::0::1::::<><>::uid://b5ow1q35pt7e8::::res://untitled_Plaster002_Color.jpg<>res://Scripts/Track.gd<>uid://ujbngyvm1kw2::::res://Images/start.png
-::res://Scripts/::1716635749
+testing_grounds.gdshader::Shader::-1::1716807676::0::1::::<><>::
+testing_grounds.tscn::PackedScene::3595659374033876::1716807580::0::1::::<><>::res://Scripts/testing_grounds.gd<>uid://c2orfd7syn6st::::res://Scenes/Driver.tscn<>uid://b8so74nq27r3::::res://Scenes/control.tscn<>uid://bd2b8c7axdman::::res://Images/Smoke/0.png<>uid://1h8g6do3ehl5::::res://Images/3.png<>uid://cos20lm280jhf::::res://untitled_Asphalt010_Color.png<>uid://d3vr3isyy8a3c::::res://Images/2.png<>uid://c70a0sni01kbr::::res://Images/1.png<>uid://dj47kp8g6e101::::res://Scenes/track.tscn<>uid://div5hc3woviwa::::res://Images/go.png<>uid://c5caeipg0wlk4::::res://Images/slash.png<>uid://dgq58u7esrr44::::res://Scenes/Enemy.tscn<>res://Scenes/testing_grounds.gdshader<>uid://c2egs1tnh6do4::::res://icon.svg<>uid://45ep3mqltsob::::res://Audio/bg_music.output.mp3
+track.tscn::PackedScene::7852790239539928932::1716807674::0::1::::<><>::uid://b5ow1q35pt7e8::::res://untitled_Plaster002_Color.jpg<>res://Scripts/Track.gd<>uid://ujbngyvm1kw2::::res://Images/start.png<>uid://dhvsiuy4n8lo8::::res://Scenes/Trees.tscn<>uid://bjhjdwdrp2b5k::::res://Scenes/lamp_post.tscn<>uid://tpv8gi7tqxot::::res://Audio/birds_outside_002_wide.wav
+Trees.tscn::PackedScene::7695044170480439457::1716798061::0::1::::<><>::res://Scripts/Trees.gd<>res://Scripts/Trees.gdshader<>uid://s6bedp1r38c3::::res://Images/Trees/Paint Layer 1.PNG<>uid://bt5ddvq4h480h::::res://Images/Trees/Paint Layer 2.PNG<>uid://omfx2nfgsyga::::res://Images/Trees/Paint Layer 3.PNG<>uid://3k0r0ugt8ul1::::res://Images/Trees/Paint Layer 4.PNG<>uid://dcw8bpg06o32q::::res://Images/Trees/Paint Layer 5.PNG<>uid://cwuxxvimgoctj::::res://Images/Trees/Paint Layer 6.PNG<>uid://c8dwkpqs4qvm6::::res://Images/Trees/Paint Layer 7.PNG<>uid://bgtsmxk0ygn3s::::res://Images/Trees/Paint Layer 8.PNG<>uid://bu5uxxclmfvch::::res://Images/Trees/Paint Layer 9.PNG<>uid://rq405i2suqen::::res://Images/Trees/Paint Layer 10.PNG
+::res://Scripts/::1716807676
 Control.gd::GDScript::-1::1711535450::0::1::::<>Control<>::
-Drift_Line.gd::GDScript::-1::1710865154::0::1::::<>Node2D<>::
-Enemy.gd::GDScript::-1::1716541598::0::1::::<>CharacterBody2D<>::
-GLOBAL.gd::GDScript::-1::1716635565::0::1::::<>Node<>::
+Drift_Line.gd::GDScript::-1::1716795756::0::1::::<>Node2D<>::
+Enemy.gd::GDScript::-1::1716801829::0::1::::<>CharacterBody2D<>::
+GLOBAL.gd::GDScript::-1::1716807674::0::1::::<>Node<>::
 Line2D.gd::GDScript::-1::1710863842::0::1::::<>Line2D<>::
-Player.gd::GDScript::-1::1716378625::0::1::::<>CharacterBody2D<>::
-testing_grounds.gd::GDScript::-1::1716635749::0::1::::<>Node2D<>::
-Track.gd::GDScript::-1::1716635749::0::1::::<>Line2D<>::
-::res://Sounds/::1716726119
-Full Song Bolero.output.wav::AudioStreamWAV::2649361237271787039::1716725138::1716725147::1::::<><>::
+Player.gd::GDScript::-1::1716801314::0::1::::<>CharacterBody2D<>::
+testing_grounds.gd::GDScript::-1::1716806659::0::1::::<>Node2D<>::
+Track.gd::GDScript::-1::1716807339::0::1::::<>Line2D<>::
+Trees.gd::GDScript::-1::1716794689::0::1::::<>StaticBody2D<>::
+Trees.gdshader::Shader::-1::1716807676::0::1::::<><>::

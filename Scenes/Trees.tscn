@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://dhvsiuy4n8lo8"]
 
-[ext_resource type="Script" path="res://Trees.gd" id="1_wfo58"]
-[ext_resource type="Shader" path="res://Scenes/Trees.gdshader" id="2_q4hvj"]
+[ext_resource type="Script" path="res://Scripts/Trees.gd" id="1_mdy05"]
+[ext_resource type="Shader" path="res://Scripts/Trees.gdshader" id="2_5hj7y"]
 [ext_resource type="Texture2D" uid="uid://s6bedp1r38c3" path="res://Images/Trees/Paint Layer 1.PNG" id="2_t2ntd"]
 [ext_resource type="Texture2D" uid="uid://bt5ddvq4h480h" path="res://Images/Trees/Paint Layer 2.PNG" id="3_4mwy6"]
 [ext_resource type="Texture2D" uid="uid://omfx2nfgsyga" path="res://Images/Trees/Paint Layer 3.PNG" id="4_5ejfr"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://rq405i2suqen" path="res://Images/Trees/Paint Layer 10.PNG" id="11_iyg7k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t5l6f"]
-shader = ExtResource("2_q4hvj")
+shader = ExtResource("2_5hj7y")
 shader_parameter/x_intensity = 3.0
 shader_parameter/y_intensity = 0.5
 shader_parameter/offset = 0.0
@@ -29,8 +29,9 @@ radius = 12.0416
 polygon = PackedVector2Array(0, -10, 5, -10, 10, -5, 10, 0, 10, 5, 5, 10, 0, 10, -5, 10, -10, 5, -10, 0, -10, -5, -5, -10)
 
 [node name="Trees" type="StaticBody2D"]
+z_index = 1
 scale = Vector2(0.2, 0.2)
-script = ExtResource("1_wfo58")
+script = ExtResource("1_mdy05")
 
 [node name="PaintLayer1" type="Sprite2D" parent="."]
 light_mask = 4

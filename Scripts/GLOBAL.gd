@@ -1,4 +1,5 @@
 extends Node
 
-var finished = false
+var finished = null
 var laps = 4
+var is_day = null

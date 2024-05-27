@@ -14,7 +14,7 @@ var traction_slow = 18.0
 
 # Variables for handling car dynamics
 var acceleration = Vector2.ZERO
-var steer_direction = 0.0
+var steer_direction := 0.0
 var target_steer_direction = 0.0
 var responsiveness = 6.0 # lower is smoother, higher is more responsive
 
@@ -22,6 +22,14 @@ var responsiveness = 6.0 # lower is smoother, higher is more responsive
 var zoom_speed = 0.1
 var min_zoom = 0.5
 var max_zoom = 1.5
+
+func _ready():
+	if Global.is_day:
+		$Beam_Left.enabled = false
+		$Beam_Right.enabled = false
+	elif !Global.is_day:
+		$Beam_Left.enabled = true
+		$Beam_Right.enabled = true
 
 # Main physics process function, called every frame
 func _physics_process(delta):
@@ -50,7 +58,7 @@ func get_input():
 		acceleration = transform.x * braking # Apply braking force
 	elif Input.is_action_pressed("w"):
 		acceleration = transform.x * engine_power # Apply engine power
-		$AudioStreamPlayer2D.play() # Play engine sound
+		#$AudioStreamPlayer2D.play() # Play engine sound
 
 # Adjust the camera zoom based on the car's speed
 func adjust_camera_zoom(delta):
@@ -65,7 +73,6 @@ func adjust_camera_zoom(delta):
 func calculate_steering(delta):
 	# Smoothly adjust the steering direction towards the target
 	steer_direction = lerp(steer_direction, target_steer_direction, responsiveness * delta) # Smooth steering transition
-	
 	# Adjust the steering angle based on speed for cornering
 	var target_steering_angle = 8.0
 	if velocity.length() <= 850:
@@ -97,7 +104,7 @@ func calculate_steering(delta):
 func particles():
 	var l = preload("res://Scenes/drift_line.tscn").instantiate()
 	var r = l.duplicate()
-	if velocity.length() > slip_speed and steer_direction:
+	if velocity.length() > slip_speed and abs(steer_direction) > 0.1:
 		l.position = $Rear_Left_Wheel.global_position
 		l.rotation = rotation
 		$Rear_Left_Wheel.add_child(l)

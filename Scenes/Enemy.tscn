@@ -1,21 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dgq58u7esrr44"]
+[gd_scene load_steps=9 format=3 uid="uid://dgq58u7esrr44"]
 
-[ext_resource type="Shader" path="res://Scenes/Driver.gdshader" id="1_u2xkq"]
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_vkb6g"]
 [ext_resource type="Texture2D" uid="uid://dkngb7v0n521u" path="res://Images/Miscellaneous/bk_cars1.a.png" id="2_5ifvn"]
 [ext_resource type="Texture2D" uid="uid://0lralrsy83fu" path="res://Images/Miscellaneous/cars_normal.png" id="3_ktccx"]
 [ext_resource type="Texture2D" uid="uid://bmhrempptumcc" path="res://Images/Miscellaneous/cars.png" id="4_5btha"]
 [ext_resource type="Texture2D" uid="uid://durwfx1x2x473" path="res://Images/Lights/long_beam_hd.png" id="7_7tpv4"]
-[ext_resource type="AudioStream" uid="uid://10builabfbxu" path="res://Audio/speed.mp3" id="8_h1l6s"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ghs3s"]
-shader = ExtResource("1_u2xkq")
-shader_parameter/color1 = null
-shader_parameter/color2 = null
-shader_parameter/threshold = null
-shader_parameter/intensity = null
-shader_parameter/opacity = null
-shader_parameter/glow_color = Color(0, 0.831373, 0, 0.117647)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_mooqw"]
 diffuse_texture = ExtResource("2_5ifvn")
@@ -31,7 +20,7 @@ polygon = PackedVector2Array(-49, -33, -26, -33, -18, -31, 11, -31, 11, -36, 13,
 radius = 32.0
 height = 136.0
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" groups=["Bots"]]
 light_mask = 2
 visibility_layer = 2
 collision_layer = 3
@@ -50,7 +39,6 @@ metadata/_edit_group_ = true
 z_index = 1
 texture_filter = 1
 texture_repeat = 2
-material = SubResource("ShaderMaterial_ghs3s")
 rotation = 1.57079
 scale = Vector2(1.5, 1.5)
 texture = SubResource("CanvasTexture_mooqw")
@@ -89,10 +77,6 @@ shadow_enabled = true
 texture = ExtResource("7_7tpv4")
 offset = Vector2(0, -250)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_h1l6s")
-volume_db = -80.0
-
 [node name="Rays" type="Node2D" parent="."]
 
 [node name="L" type="RayCast2D" parent="Rays"]
@@ -100,7 +84,7 @@ rotation = -2.09439
 target_position = Vector2(0, 800)
 collision_mask = 8
 
-[node name="F" type="RayCast2D" parent="Rays" groups=["Bot"]]
+[node name="F" type="RayCast2D" parent="Rays"]
 rotation = -1.57079
 target_position = Vector2(0, 800)
 collision_mask = 8

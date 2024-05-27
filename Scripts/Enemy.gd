@@ -23,6 +23,15 @@ var zoom_speed = 0.1
 var min_zoom = 0.5
 var max_zoom = 1.5
 
+
+func _ready():
+	if Global.is_day:
+		$Beam_Left.enabled = false
+		$Beam_Right.enabled = false
+	elif !Global.is_day:
+		$Beam_Left.enabled = true
+		$Beam_Right.enabled = true
+
 # Main physics process function, called every frame
 func _physics_process(delta):
 	acceleration = Vector2.ZERO
@@ -77,8 +86,6 @@ func get_input():
 	# Update the target steering direction based on the turn value
 	target_steer_direction = turn * turning_strength * deg_to_rad(steering_angle)
 
-
-	
 # Calculate the car's steering and handling
 func calculate_steering(delta):
 	# Smoothly adjust the steering direction towards the target
@@ -115,7 +122,7 @@ func calculate_steering(delta):
 func particles():
 	var l = preload("res://Scenes/drift_line.tscn").instantiate()
 	var r = l.duplicate()
-	if velocity.length() > slip_speed and steer_direction:
+	if velocity.length() > slip_speed and abs(steer_direction) > 0.1:
 		l.position = $Rear_Left_Wheel.global_position
 		l.rotation = rotation
 		$Rear_Left_Wheel.add_child(l)
