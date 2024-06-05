@@ -1,4 +1,9 @@
-res://Scenes/testing_grounds.tscn
+res://Scenes/enter.tscn
 res://Scenes/enter.gdshader
 res://Scripts/Trees.gdshader
 res://Scenes/testing_grounds.gdshader
+res://Scenes/track.tscn
+res://Scenes/testing_grounds.tscn
+res://Scenes/Driver.tscn
+res://Scenes/lamp_post.tscn
+res://Scenes/Enemy.tscn
