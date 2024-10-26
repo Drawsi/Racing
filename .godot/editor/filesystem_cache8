@@ -1,85 +1,85 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716917992
-default_bus_layout.tres::AudioBusLayout::2991079766492835540::1716797589::0::1::::<><>::
-icon.svg::CompressedTexture2D::6676595498435827405::1707760161::1715711127::1::::<><>::
-README.md::TextFile::-1::1711493294::0::1::::<><>::
-untitled_Asphalt010_Color.png::CompressedTexture2D::5794328579110401743::1715788549::1716376224::1::::<><>::
-untitled_Concrete034_Color.jpg::CompressedTexture2D::3204197459031021872::1715788559::1715788592::1::::<><>::
-untitled_DE19F1FreisingDoor00005_small.png::CompressedTexture2D::8393526474639731604::1715788575::1715788592::1::::<><>::
-untitled_Gravel004_Color.jpg::CompressedTexture2D::5487395155918845706::1715788565::1715788593::1::::<><>::
-untitled_Ground003_Color.jpg::CompressedTexture2D::4183477933615164979::1715788551::1715788593::1::::<><>::
-untitled_Ground042_Color.jpg::CompressedTexture2D::583414599029649620::1715788560::1715788593::1::::<><>::
-untitled_MarekCompositeWall00001_transparent.png::CompressedTexture2D::1518696995337532224::1715788575::1715788592::1::::<><>::
-untitled_Metal002_Color.jpg::CompressedTexture2D::2340967465247854636::1715788557::1715788593::1::::<><>::
-untitled_PavingStones072_Color.jpg::CompressedTexture2D::1956601539601288192::1715788554::1715788593::1::::<><>::
-untitled_Plaster002_Color.jpg::CompressedTexture2D::4522370370885316593::1715788570::1715788593::1::::<><>::
-untitled_road_marking_crossing.png::CompressedTexture2D::6962659629737342251::1715788559::1715788592::1::::<><>::
-untitled_road_marking_dash.png::CompressedTexture2D::1974401812180158947::1715788559::1715788592::1::::<><>::
-::res://Audio/::1716802072
-bg_music.output.mp3::AudioStreamMP3::2097678942938263277::1716797712::1716797712::1::::<><>::
-birds_outside_002_wide.wav::AudioStreamWAV::1365888012458985339::1716800646::1716800652::1::::<><>::
-::res://Images/::1716726119
-1.png::CompressedTexture2D::7070539418403040507::1716575843::1716575910::1::::<><>::
-2.png::CompressedTexture2D::9168984246002933058::1716575854::1716575910::1::::<><>::
-3.png::CompressedTexture2D::1841376587923929872::1716575861::1716575910::1::::<><>::
-go.png::CompressedTexture2D::7765958892679493076::1716576060::1716576062::1::::<><>::
-slash.png::CompressedTexture2D::6882643018876678877::1716633896::1716633898::1::::<><>::
-start.png::CompressedTexture2D::1422440558047336799::1716576642::1716576643::1::::<><>::
-::res://Images/Lights/::1715787230
-3.png::CompressedTexture2D::5954291833614679405::1711486857::1711487042::1::::<><>::
-5.png::CompressedTexture2D::3509580795426224676::1711486857::1711487042::1::::<><>::
-beam.png::CompressedTexture2D::8474659079209989081::1711492195::1711492195::1::::<><>::
-long_beam.png::CompressedTexture2D::1598163315321751514::1711492195::1711492195::1::::<><>::
-long_beam_hd.png::CompressedTexture2D::8599479297753356312::1712397989::1712397993::1::::<><>::
-point.png::CompressedTexture2D::2025602840776556499::1711492195::1711492195::1::::<><>::
-short_beam.png::CompressedTexture2D::5989296310745415547::1711492195::1711492195::1::::<><>::
-::res://Images/Miscellaneous/::1711539095
-9ckrbkqf.bmp::CompressedTexture2D::8056079790183915989::1711539095::1711539095::1::::<><>::
-cars.png::CompressedTexture2D::3244177437840547302::1710860913::1711538144::1::::<><>::
-cars_normal.png::CompressedTexture2D::1778462039992262966::1711538143::1711538144::1::::<><>::
-lamp_post.png::CompressedTexture2D::3854413233098319906::1711488799::1711488803::1::::<><>::
-line2.png::CompressedTexture2D::693667581432062105::1710864147::1711486790::1::::<><>::
-line.png::CompressedTexture2D::562436260829561579::1710864103::1711486790::1::::<><>::
-street.png::CompressedTexture2D::635363548580212728::1711536171::1711536171::1::::<><>::
-street_h.png::CompressedTexture2D::1911018443984326991::1711536171::1711536171::1::::<><>::
-::res://Images/Smoke/::1711486748
-0.png::CompressedTexture2D::2652845216669749317::1711483528::1711486748::1::::<><>::
-1.png::CompressedTexture2D::4206456607197438781::1711483528::1711486748::1::::<><>::
-2.png::CompressedTexture2D::7772003169292742405::1711483528::1711486748::1::::<><>::
-::res://Images/Trees/::1716726120
-Paint Layer 1.PNG::CompressedTexture2D::1327462937976116180::1716726108::1716726120::1::::<><>::
-Paint Layer 2.PNG::CompressedTexture2D::3782128682832907861::1716726108::1716726120::1::::<><>::
-Paint Layer 3.PNG::CompressedTexture2D::1007762440653657468::1716726108::1716726120::1::::<><>::
-Paint Layer 4.PNG::CompressedTexture2D::1987481027000214744::1716726108::1716726120::1::::<><>::
-Paint Layer 5.PNG::CompressedTexture2D::7347062293796855446::1716726108::1716726120::1::::<><>::
-Paint Layer 6.PNG::CompressedTexture2D::6359722162500136039::1716726108::1716726120::1::::<><>::
-Paint Layer 7.PNG::CompressedTexture2D::7096620785907729051::1716726108::1716726120::1::::<><>::
-Paint Layer 8.PNG::CompressedTexture2D::2847892482898393166::1716726108::1716726120::1::::<><>::
-Paint Layer 9.PNG::CompressedTexture2D::3853385513833392615::1716726108::1716726120::1::::<><>::
-Paint Layer 10.PNG::CompressedTexture2D::1228047412859911669::1716726108::1716726120::1::::<><>::
-::res://Scenes/::1716831521
-control.tscn::PackedScene::139432942666143254::1715785769::0::1::::<><>::res://Scripts/Control.gd
-drift_line.tscn::PackedScene::7054899154820761566::1716798061::0::1::::<><>::res://Scripts/Drift_Line.gd
-Driver.tscn::PackedScene::6697882759870716571::1716831488::0::1::::<><>::res://Scripts/Player.gd<>uid://0lralrsy83fu::::res://Images/Miscellaneous/cars_normal.png<>uid://dkngb7v0n521u::::res://Images/Miscellaneous/bk_cars1.a.png<>uid://bmhrempptumcc::::res://Images/Miscellaneous/cars.png<>uid://durwfx1x2x473::::res://Images/Lights/long_beam_hd.png
-Enemy.tscn::PackedScene::7615306698061538147::1716831488::0::1::::<><>::res://Scripts/Enemy.gd<>uid://dkngb7v0n521u::::res://Images/Miscellaneous/bk_cars1.a.png<>uid://0lralrsy83fu::::res://Images/Miscellaneous/cars_normal.png<>uid://bmhrempptumcc::::res://Images/Miscellaneous/cars.png<>uid://durwfx1x2x473::::res://Images/Lights/long_beam_hd.png
-enter.gd::GDScript::-1::1716801720::0::1::::<>Control<>::
-enter.gdshader::Shader::-1::1716831521::0::1::::<><>::
-enter.tscn::PackedScene::7874087770983613948::1716831488::0::1::::<><>::res://Scenes/enter.gd<>res://Scenes/enter.gdshader
-lamp_post.tscn::PackedScene::3033123891972050866::1716831488::0::1::::<><>::uid://34hnatjkfvn4::::res://Images/Lights/point.png<>uid://bu6dvf8arkhsc::::res://Images/Miscellaneous/lamp_post.png
-map.tscn::PackedScene::503253322930251776::1716375845::0::1::::<><>::uid://bdu0s34hq32l8::::res://untitled.glb
-setting_slider.tscn::PackedScene::534529025209459007::1710342504::0::1::::<><>::
-testing_grounds.gdshader::Shader::-1::1716831521::0::1::::<><>::
-testing_grounds.tscn::PackedScene::3595659374033876::1716831521::0::1::::<><>::res://Scripts/testing_grounds.gd<>uid://c2orfd7syn6st::::res://Scenes/Driver.tscn<>uid://b8so74nq27r3::::res://Scenes/control.tscn<>uid://bd2b8c7axdman::::res://Images/Smoke/0.png<>uid://1h8g6do3ehl5::::res://Images/3.png<>uid://cos20lm280jhf::::res://untitled_Asphalt010_Color.png<>uid://d3vr3isyy8a3c::::res://Images/2.png<>uid://c70a0sni01kbr::::res://Images/1.png<>uid://dj47kp8g6e101::::res://Scenes/track.tscn<>uid://div5hc3woviwa::::res://Images/go.png<>uid://c5caeipg0wlk4::::res://Images/slash.png<>uid://dgq58u7esrr44::::res://Scenes/Enemy.tscn<>res://Scenes/testing_grounds.gdshader<>uid://c2egs1tnh6do4::::res://icon.svg<>uid://45ep3mqltsob::::res://Audio/bg_music.output.mp3
-track.tscn::PackedScene::7852790239539928932::1716831488::0::1::::<><>::uid://b5ow1q35pt7e8::::res://untitled_Plaster002_Color.jpg<>res://Scripts/Track.gd<>uid://ujbngyvm1kw2::::res://Images/start.png<>uid://dhvsiuy4n8lo8::::res://Scenes/Trees.tscn<>uid://bjhjdwdrp2b5k::::res://Scenes/lamp_post.tscn<>uid://tpv8gi7tqxot::::res://Audio/birds_outside_002_wide.wav
-Trees.tscn::PackedScene::7695044170480439457::1716798061::0::1::::<><>::res://Scripts/Trees.gd<>res://Scripts/Trees.gdshader<>uid://s6bedp1r38c3::::res://Images/Trees/Paint Layer 1.PNG<>uid://bt5ddvq4h480h::::res://Images/Trees/Paint Layer 2.PNG<>uid://omfx2nfgsyga::::res://Images/Trees/Paint Layer 3.PNG<>uid://3k0r0ugt8ul1::::res://Images/Trees/Paint Layer 4.PNG<>uid://dcw8bpg06o32q::::res://Images/Trees/Paint Layer 5.PNG<>uid://cwuxxvimgoctj::::res://Images/Trees/Paint Layer 6.PNG<>uid://c8dwkpqs4qvm6::::res://Images/Trees/Paint Layer 7.PNG<>uid://bgtsmxk0ygn3s::::res://Images/Trees/Paint Layer 8.PNG<>uid://bu5uxxclmfvch::::res://Images/Trees/Paint Layer 9.PNG<>uid://rq405i2suqen::::res://Images/Trees/Paint Layer 10.PNG
-::res://Scripts/::1716831521
-Control.gd::GDScript::-1::1711535450::0::1::::<>Control<>::
-Drift_Line.gd::GDScript::-1::1716795756::0::1::::<>Node2D<>::
-Enemy.gd::GDScript::-1::1716801829::0::1::::<>CharacterBody2D<>::
-GLOBAL.gd::GDScript::-1::1716807674::0::1::::<>Node<>::
-Line2D.gd::GDScript::-1::1710863842::0::1::::<>Line2D<>::
-Player.gd::GDScript::-1::1716801314::0::1::::<>CharacterBody2D<>::
-testing_grounds.gd::GDScript::-1::1716831463::0::1::::<>Node2D<>::
-Track.gd::GDScript::-1::1716807339::0::1::::<>Line2D<>::
-Trees.gd::GDScript::-1::1716794689::0::1::::<>StaticBody2D<>::
-Trees.gdshader::Shader::-1::1716831521::0::1::::<><>::
+::res://::1718374630
+default_bus_layout.tres::AudioBusLayout::2991079766492835540::1718374604::0::1::::<><>::
+icon.svg::CompressedTexture2D::6676595498435827405::1710235568::1718374633::1::::<><>::
+README.md::TextFile::-1::1712838018::0::1::::<><>::
+untitled_Asphalt010_Color.png::CompressedTexture2D::5794328579110401743::1718374605::1718374605::1::::<><>::
+untitled_Concrete034_Color.jpg::CompressedTexture2D::3204197459031021872::1718374605::1718374605::1::::<><>::
+untitled_DE19F1FreisingDoor00005_small.png::CompressedTexture2D::8393526474639731604::1718374605::1718374605::1::::<><>::
+untitled_Gravel004_Color.jpg::CompressedTexture2D::5487395155918845706::1718374605::1718374605::1::::<><>::
+untitled_Ground003_Color.jpg::CompressedTexture2D::4183477933615164979::1718374605::1718374605::1::::<><>::
+untitled_Ground042_Color.jpg::CompressedTexture2D::583414599029649620::1718374605::1718374605::1::::<><>::
+untitled_MarekCompositeWall00001_transparent.png::CompressedTexture2D::1518696995337532224::1718374605::1718374605::1::::<><>::
+untitled_Metal002_Color.jpg::CompressedTexture2D::2340967465247854636::1718374605::1718374605::1::::<><>::
+untitled_PavingStones072_Color.jpg::CompressedTexture2D::1956601539601288192::1718374605::1718374605::1::::<><>::
+untitled_Plaster002_Color.jpg::CompressedTexture2D::4522370370885316593::1718374605::1718374605::1::::<><>::
+untitled_road_marking_crossing.png::CompressedTexture2D::6962659629737342251::1718374605::1718374605::1::::<><>::
+untitled_road_marking_dash.png::CompressedTexture2D::1974401812180158947::1718374605::1718374605::1::::<><>::
+::res://Audio/::1718374604
+bg_music.output.mp3::AudioStreamMP3::2097678942938263277::1718374604::1718374604::1::::<><>::
+birds_outside_002_wide.wav::AudioStreamWAV::1365888012458985339::1718374604::1718374604::1::::<><>::
+::res://Images/::1718374604
+1.png::CompressedTexture2D::7070539418403040507::1718374604::1718374604::1::::<><>::
+2.png::CompressedTexture2D::9168984246002933058::1718374604::1718374604::1::::<><>::
+3.png::CompressedTexture2D::1841376587923929872::1718374604::1718374604::1::::<><>::
+go.png::CompressedTexture2D::7765958892679493076::1718374604::1718374604::1::::<><>::
+slash.png::CompressedTexture2D::6882643018876678877::1718374604::1718374604::1::::<><>::
+start.png::CompressedTexture2D::1422440558047336799::1718374604::1718374604::1::::<><>::
+::res://Images/Lights/::1712838018
+3.png::CompressedTexture2D::5954291833614679405::1712838018::1712838018::1::::<><>::
+5.png::CompressedTexture2D::3509580795426224676::1712838018::1712838018::1::::<><>::
+beam.png::CompressedTexture2D::8474659079209989081::1712838018::1712838018::1::::<><>::
+long_beam.png::CompressedTexture2D::1598163315321751514::1712838018::1712838018::1::::<><>::
+long_beam_hd.png::CompressedTexture2D::8599479297753356312::1712838018::1712838018::1::::<><>::
+point.png::CompressedTexture2D::2025602840776556499::1712838018::1712838018::1::::<><>::
+short_beam.png::CompressedTexture2D::5989296310745415547::1712838018::1712838018::1::::<><>::
+::res://Images/Miscellaneous/::1712838018
+9ckrbkqf.bmp::CompressedTexture2D::8056079790183915989::1712838018::1712838018::1::::<><>::
+cars.png::CompressedTexture2D::3244177437840547302::1712838018::1712838018::1::::<><>::
+cars_normal.png::CompressedTexture2D::1778462039992262966::1712838018::1712838018::1::::<><>::
+lamp_post.png::CompressedTexture2D::3854413233098319906::1712838018::1712838018::1::::<><>::
+line2.png::CompressedTexture2D::693667581432062105::1712838018::1712838018::1::::<><>::
+line.png::CompressedTexture2D::562436260829561579::1712838018::1712838018::1::::<><>::
+street.png::CompressedTexture2D::635363548580212728::1712838018::1712838018::1::::<><>::
+street_h.png::CompressedTexture2D::1911018443984326991::1712838018::1712838018::1::::<><>::
+::res://Images/Smoke/::1712838018
+0.png::CompressedTexture2D::2652845216669749317::1712838018::1712838018::1::::<><>::
+1.png::CompressedTexture2D::4206456607197438781::1712838018::1712838018::1::::<><>::
+2.png::CompressedTexture2D::7772003169292742405::1712838018::1712838018::1::::<><>::
+::res://Images/Trees/::1718374604
+Paint Layer 1.PNG::CompressedTexture2D::1327462937976116180::1718374604::1718374604::1::::<><>::
+Paint Layer 2.PNG::CompressedTexture2D::3782128682832907861::1718374604::1718374604::1::::<><>::
+Paint Layer 3.PNG::CompressedTexture2D::1007762440653657468::1718374604::1718374604::1::::<><>::
+Paint Layer 4.PNG::CompressedTexture2D::1987481027000214744::1718374604::1718374604::1::::<><>::
+Paint Layer 5.PNG::CompressedTexture2D::7347062293796855446::1718374604::1718374604::1::::<><>::
+Paint Layer 6.PNG::CompressedTexture2D::6359722162500136039::1718374604::1718374604::1::::<><>::
+Paint Layer 7.PNG::CompressedTexture2D::7096620785907729051::1718374604::1718374604::1::::<><>::
+Paint Layer 8.PNG::CompressedTexture2D::2847892482898393166::1718374604::1718374604::1::::<><>::
+Paint Layer 9.PNG::CompressedTexture2D::3853385513833392615::1718374604::1718374604::1::::<><>::
+Paint Layer 10.PNG::CompressedTexture2D::1228047412859911669::1718374604::1718374604::1::::<><>::
+::res://Scenes/::1718374604
+control.tscn::PackedScene::139432942666143254::1712838018::0::1::::<><>::res://Scripts/Control.gd
+drift_line.tscn::PackedScene::7054899154820761566::1718374604::0::1::::<><>::res://Scripts/Drift_Line.gd
+Driver.tscn::PackedScene::6697882759870716571::1718374604::0::1::::<><>::res://Scripts/Player.gd<>uid://0lralrsy83fu::::res://Images/Miscellaneous/cars_normal.png<>uid://dkngb7v0n521u::::res://Images/Miscellaneous/bk_cars1.a.png<>uid://bmhrempptumcc::::res://Images/Miscellaneous/cars.png<>uid://durwfx1x2x473::::res://Images/Lights/long_beam_hd.png
+Enemy.tscn::PackedScene::7615306698061538147::1718374604::0::1::::<><>::res://Scripts/Enemy.gd<>uid://dkngb7v0n521u::::res://Images/Miscellaneous/bk_cars1.a.png<>uid://0lralrsy83fu::::res://Images/Miscellaneous/cars_normal.png<>uid://bmhrempptumcc::::res://Images/Miscellaneous/cars.png<>uid://durwfx1x2x473::::res://Images/Lights/long_beam_hd.png
+enter.gd::GDScript::-1::1718374604::0::1::::<>Control<>::
+enter.gdshader::Shader::-1::1718374604::0::1::::<><>::
+enter.tscn::PackedScene::7874087770983613948::1718374604::0::1::::<><>::res://Scenes/enter.gd<>res://Scenes/enter.gdshader
+lamp_post.tscn::PackedScene::3033123891972050866::1718374604::0::1::::<><>::uid://34hnatjkfvn4::::res://Images/Lights/point.png<>uid://bu6dvf8arkhsc::::res://Images/Miscellaneous/lamp_post.png
+map.tscn::PackedScene::503253322930251776::1718374604::0::1::::<><>::uid://bdu0s34hq32l8::::res://untitled.glb
+setting_slider.tscn::PackedScene::534529025209459007::1712838018::0::1::::<><>::
+testing_grounds.gdshader::Shader::-1::1718374604::0::1::::<><>::
+testing_grounds.tscn::PackedScene::3595659374033876::1718374604::0::1::::<><>::res://Scripts/testing_grounds.gd<>uid://c2orfd7syn6st::::res://Scenes/Driver.tscn<>uid://b8so74nq27r3::::res://Scenes/control.tscn<>uid://bd2b8c7axdman::::res://Images/Smoke/0.png<>uid://1h8g6do3ehl5::::res://Images/3.png<>uid://cos20lm280jhf::::res://untitled_Asphalt010_Color.png<>uid://d3vr3isyy8a3c::::res://Images/2.png<>uid://c70a0sni01kbr::::res://Images/1.png<>uid://dj47kp8g6e101::::res://Scenes/track.tscn<>uid://div5hc3woviwa::::res://Images/go.png<>uid://c5caeipg0wlk4::::res://Images/slash.png<>uid://dgq58u7esrr44::::res://Scenes/Enemy.tscn<>res://Scenes/testing_grounds.gdshader<>uid://c2egs1tnh6do4::::res://icon.svg<>uid://45ep3mqltsob::::res://Audio/bg_music.output.mp3
+track.tscn::PackedScene::7852790239539928932::1718374604::0::1::::<><>::uid://b5ow1q35pt7e8::::res://untitled_Plaster002_Color.jpg<>res://Scripts/Track.gd<>uid://ujbngyvm1kw2::::res://Images/start.png<>uid://dhvsiuy4n8lo8::::res://Scenes/Trees.tscn<>uid://bjhjdwdrp2b5k::::res://Scenes/lamp_post.tscn<>uid://tpv8gi7tqxot::::res://Audio/birds_outside_002_wide.wav
+Trees.tscn::PackedScene::7695044170480439457::1718374604::0::1::::<><>::res://Scripts/Trees.gd<>res://Scripts/Trees.gdshader<>uid://s6bedp1r38c3::::res://Images/Trees/Paint Layer 1.PNG<>uid://bt5ddvq4h480h::::res://Images/Trees/Paint Layer 2.PNG<>uid://omfx2nfgsyga::::res://Images/Trees/Paint Layer 3.PNG<>uid://3k0r0ugt8ul1::::res://Images/Trees/Paint Layer 4.PNG<>uid://dcw8bpg06o32q::::res://Images/Trees/Paint Layer 5.PNG<>uid://cwuxxvimgoctj::::res://Images/Trees/Paint Layer 6.PNG<>uid://c8dwkpqs4qvm6::::res://Images/Trees/Paint Layer 7.PNG<>uid://bgtsmxk0ygn3s::::res://Images/Trees/Paint Layer 8.PNG<>uid://bu5uxxclmfvch::::res://Images/Trees/Paint Layer 9.PNG<>uid://rq405i2suqen::::res://Images/Trees/Paint Layer 10.PNG
+::res://Scripts/::1718374604
+Control.gd::GDScript::-1::1712838018::0::1::::<>Control<>::
+Drift_Line.gd::GDScript::-1::1718374604::0::1::::<>Node2D<>::
+Enemy.gd::GDScript::-1::1718374604::0::1::::<>CharacterBody2D<>::
+GLOBAL.gd::GDScript::-1::1718374604::0::1::::<>Node<>::
+Line2D.gd::GDScript::-1::1712838018::0::1::::<>Line2D<>::
+Player.gd::GDScript::-1::1718374604::0::1::::<>CharacterBody2D<>::
+testing_grounds.gd::GDScript::-1::1718374604::0::1::::<>Node2D<>::
+Track.gd::GDScript::-1::1718374604::0::1::::<>Line2D<>::
+Trees.gd::GDScript::-1::1718374604::0::1::::<>StaticBody2D<>::
+Trees.gdshader::Shader::-1::1718374604::0::1::::<><>::
